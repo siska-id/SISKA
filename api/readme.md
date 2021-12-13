@@ -1,5 +1,7 @@
 ## REST API
 
+API ini yang nanti akan digunakan untuk mengolah data di Aplikasi SISKA.
+
 Rest API ini menggunakan PHP berbasis Object dan MySQL sebagai Database nya, serta menggunakan JSON sebagai Output hasil nya.
 
 * create.php (API untuk menambah sebuah data ke Database)
