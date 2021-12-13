@@ -3,7 +3,8 @@
 
 # SISKA
 
-Aplikasi Sistem Informasi Desa berbasis Mobile
+
+## Aplikasi Sistem Informasi Desa berbasis Mobile
 
 Jadi, Untuk Sistem Informasi Desa Berbasis Mobile kali ini dinamakan dengan SISKA. Apa itu SISKA? Siska adalah Sistem Informasi Desa dan Kawasan. SISKA ini juga merupakan Seperangkat Alat yang memiliki manfaat atau fungsi untuk memfasilitasi sebuah perangkat lunak, perangkat keras, jaringan serta sumber daya manusia yang dikelola oleh Pemerintah Desa untuk mendukung pengelolaan serta pemanfaatan data desa yang mana nantinya juga akan diserap dan diberikan informasi secara spesifik tentang potensi dan berita secara lengkap yang ada pada desa tersebut.
 
