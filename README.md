@@ -1,4 +1,6 @@
-<img align="right" src="https://i.ibb.co/gSBbktQ/Round-Corner-1.png" height="250" width="250">
+<p align="center">
+   <img src="https://i.ibb.co/gSBbktQ/Round-Corner-1.png" height="230" width="230">
+</p>
 
 
 # SISKA
