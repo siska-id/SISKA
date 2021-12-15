@@ -1,4 +1,8 @@
 <?php
+if (!$_POST) {
+    echo "Invalid Method";
+    return FALSE;
+} else {
 header('Content-Type: application/json');
 include "./db.php";
 
@@ -10,3 +14,4 @@ echo json_encode([
 'id' => $id,
 'success' => $result
 ]);
+}

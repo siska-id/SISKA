@@ -1,6 +1,8 @@
 <?php
+error_reporting(0);
 if (!$_POST) {
     echo "Invalid Method";
+    return FALSE;
 } else{
 header('Content-Type: application/json');
 include "./db.php";
