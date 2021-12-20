@@ -114,4 +114,43 @@ Lalu, terdapat Gambar pada Profil Akun Aplikasi SISKA Yang sudah tertaut atau su
 
 Nah, Pada bagian yang memiliki keunikan dalam SISKA Mobile itu sendiri yaitu Bagian Pentautan Akun serta Transformasi Kerja Desa Digital, dimana suatu User maupun Pengguna SISKA Mobile itu sendiri diberikan petunjuk atau informasi bahwa terdapat tautan konfirmasi akun untuk dapat masuk dan mengeksplor bagian Layanan SISKA yang merupakan jenis bagian atau Layanan yang sangat penting dan wajib ada dalam sebuah SID itu sendiri. Lalu, pada bagian Pentautan Akun serta Transformasi Kerja Desa Digital ini, terdapat gambar tangan yang memegang handphone dengan terdapat icon centang atau verified pada bagian tengah handphone, dimana gambar tersebut memiliki makna dan penjelasan bahwa Proses dan Sistem Kerja dari Bagian Layanan dalam SISKA itu sendiri mengharuskan user untuk melakukan pentautan akun supaya akses untuk masuk dalam layanan SISKA semakin luas dan besar. Nah, selain itu terdapat juga informasi pada bagian bawah gambar dengan kalimat "Tautkan untuk meinkmati layanan..." yang berisi penjelasan bahwa jika user sudah mentautkan akun SISKA Mobile pada Bagian Transforamsi Kerja Desa Digital, user akan mendapatkan dan menikmati latanan yang ada pada SISKA Mobile itu sendiri dari adanya Layanan Surat, Info Kontak Penting, Akses Data Kependudukan, dan juga Administrasi. Selanjutnya, yang terakhir adalah Tombol atau Bagian Penginputan serta submit konfirmasi untuk melanjutkan akses dalam Bagian Layout Konfirmasi.
 
->>>>>>> firman/master
+
+![ss siska 13](https://user-images.githubusercontent.com/87738971/145927543-58d036cd-84f7-4982-b3d5-a8d599031871.jpg)
+
+
+Kemudian, terdapat bagian Pentautan Ke Desa yang memiliki bagian atau formulir yang juga wajib untuk diisi, dimana memiliki bagian NIK atau Nomor Induk Keluarga yang berfungsi untuk mendata Nomor Induk Keluarga setiap User. Lalu, juga terdapat bagian Pemilihan Desa atau PILIH DESA. Pilih Desa sendiri adalah layanan yang ada dalam SISKA Mobile, dimana memiliki kegunaan untuk membuat list desa yang ada pada SISKA Mobile untuk user supaya dapat memilih desa yang akan dipilih atau melihat desa yang sudah terdapat list tersebut. Selanjutnya, juga terdapat bagian Nomor Kartu Keluarga yang menjelaskan bahwa Layanan SISKA Mobile itu sudah terakreditasi dan data data yang diberikan pun juga mengikuti legalitas pada Sistem Informasi Desa dan Kawasan Resmi lainnya. Berikutnya, juga terdapat bagian Upload Foto Kartu Tanda Penduduk sertas Foto Selfie Kartu Tanda Penduduk (KTP), yang dimana Upload Foto KTP dan selfie foto KTP secara tidak langsung menunjukkan bahwa Persyaratan yang ada pada SISKA Mobile itu sudah resmi dan terdata pada server SISKA Mobile resmi itu sendiri. 
+
+
+![ss siska 14](https://user-images.githubusercontent.com/87738971/145931488-7599c1de-21c0-49ea-b4da-324942260db9.jpg)
+
+
+Setelah itu, juga terdapat bagian layanan yang paling penting dalam SISKA Mobile sendiri, yaitu Layanan SISKA Mobile. Nah, layanan SISKA Mobile memiliki 4 jenis Komponen yang didalamnya terdapat komponen atau aset penting yang ada dalam SID itu sendiri. Dari adanya Komponen Pertama yaitu Layanan Surat. Layanan surat pada SISKA sendiri berfungsi untuk membuat data yang ada pada layanan siska atau layanan surat surat yang sudah terdata dan dilist pada Layanan Surat SISKA Mobile seperti Akta Kelahiran, Domisili Penduduk, Surat Izin usaha, dan lain sebagainya. Kemudian, terdapat bagian Kontak Penting, yang mana pada layanan Kontak Penting, yang mana berisi tentang Kontak Kontak Penting untuk dihubungi dan memberi bantuan bilamana user membutuhkan data kontak kontak orang penting dari para pimpinan Desa, Administrasi SISKA Mobile, orang yang bertugas sebagai keamanan dan sistem, dan lain sebagainya. Dan kemudian, juga terdapat Data Kependudukan. Data Kependudukan sendiri adalah data perseorangan atau data agregat yang terstruktur sebagai hasil kegiatan pendaftaran penduduk dan pencatatan user. Pada Data Kependudukan juga, terdapat data data seperti adanya statistik atau persentase data penduduk, jumlah penduduk dan berbagai tingkatan usia serta jenis kelamin. Berlanjut pada bagian yang terakhir, yaitu Administrasi. Administrasi sendiri pada Layanan SISKA yaitu Ruang atau Lingkup upaya pemerintah desa untuk melayani masyarakat yang mengurus administrasi kependudukan seperti kartu keluarga (KK), KTP, Akta dan keperluan pencatatan lainnya. 
+
+
+![ss siska 15](https://user-images.githubusercontent.com/87738971/145995891-891517c3-8737-4c47-b46a-4fe4ebc27674.jpg)
+![ss siska 16](https://user-images.githubusercontent.com/87738971/145996030-e8b83356-4d16-4cc5-8a56-80e465c3bf99.jpg)
+
+
+Berlanjut pada bagian Layanan Surat. Pada layanan surat ini, tertera bahwa terdapat Layanan Surat yang ditampillkan pada SISKA Mobile itu sendiri. Dengan adanya Berbagai Macam layanan surat dalam SISKA Mobile ini, diharapkan Layanan Surat dapat menjadi Prioritas utama dalam pembuatan kebutuhan user dalam melakukan penginputan data ke desa serta dapat 
+menjadi tempat atau media bagi user untuk mendapatkan informasi serta bantuan lebih lanjut jika kesulitan untuk mengaskes oleh para Admin SISKA supaya user mendapatkan kemudahan dalam pembuatan dokumen dokumen penting agar waktu yang diluangkan dapat berkualitas, hemat, efektif serta efisien dan juga lebih mudah. Nah, terdapat macam macam bagian atau Layanan Syrat yang ditawarkan dalam SISKA Mobile, yaitu sebagai berikut:
+a.) Akta Kelahiran
+b.) Domisili Penduduk
+c.) Surat Izin Usaha
+d.) Kartu Keluarga
+e.) Surat Keterangan Tidak Mampu
+f.) Surat Keterangan Berpergian
+g.) Surat Pengantar Kartu Tanda Penduduk (KTP)
+h.) Surat Keterangan Catatan Kepolisian (SKCK)
+i.) Surat Pindah
+
+
+![ss siska 17](https://user-images.githubusercontent.com/87738971/145998030-ec5fae0a-bb11-46b2-8821-992bb007204f.jpg)
+
+
+Selanjutnya, masih pada bagian Layanan SISKA, lebih tepatnya pada bagian Pencetakan Surat. Nah, pada bagian Pencetakan Surat sendiri, layanan yang ditampilkan pada SISKA sendiri terbilang cukup kompleks dan standar, mengingat tidak adanya ornamen ornamen khusus yang diberikan pada Layanan Pencetakan Surat. Dengan adanya Tampilan Image Button pada pencetakan Surat membuat user dapat menginput dokumen atau flie berupa image yang diletakkan pada Image Button tersebut. Kemudian, terdapat juga Perintah atau Peraturan untuk penginputan file image, dimana konteks kalimat atau kalimat perintah yang digunakan untuk memberi informasi kepada user bahwa file atau dokumen yang diinput dalam Image button diharuskan seperti ... berbunyi "Ukuran atau Size gambar tidak boleh lebih dari 1 Mb, Gambar harus jelas dan tidak ada mengandung Unsur SARA, Diperhatikan juga bahwa, Gambar pada Pencetakan Surat menunggu adanya Konfirmasi oleh Admin dan legilasi dari Admin untuk menghindari adanya bentuk kejahatan atau kecurangan pada penginputan" memiliki makna bahwa SISKA Mobile memiliki legalitas yang aman, resmi, dan juga amanah untuk melakukan penctakan surat pada desa itu sendiri.
+
+
+![ss siska 18](https://user-images.githubusercontent.com/87738971/146000524-9549f2a9-a02e-43e5-86c2-1aa5b784635d.jpg)
+
+
+Setelah kita menulusuri berbagai macam layanan dan tampilan tampilan yang ada pada SISKA Mobile, berlanjut pada bagian Tampilan Layout Konfirmasi. Layout Konfirmasi merupakan sebuah tampilan SISKA Mobile yang dimana jika user sudah melakukan pentautan akun ke desa maka akan muncul notifikasi ataupun tampilan layout konfirmasi seperti pada gambar diatas. Nah, pada bagian Layout Konfirmasi sendiri berisi Pemberitahuan atau informasi yang menandakan bahwa Proses Konfirmasi sudah terkirim dan terdata diserver SISKA Mobile itu sendiri, namun user perlu menunggu waktu pengkonfirmasian akun ke desa sekitar 24 Jam supaya para Admin SISKA dapat melakukan checking pada akun tersebut apakah data yang sudah disubmit pada formulir tautan desa sudah layak dan memenuhi syarat pada Peraturan SISKA Mobile itu sendiri. Selain terdapat pemberitahuan konfirmasi akun, terdapat juga button kembali yang nantinya user hanya dapat mengakses bagian Homepage dan Pentautan Akun ke Desa serta Transformasi Kerja Desa digital selama waktu konfirmasi yang berjalan sealam 24 jam itu terjadi atau berlanjut. Tak luput juga, adanya desain yang mensupport bagian Layout Konfirmasi ini membuat Tampilan Layout Konfirmasi semakin menarik dan berwarna.
