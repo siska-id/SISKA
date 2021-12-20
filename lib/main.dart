@@ -20,8 +20,22 @@ class MyApp extends StatelessWidget {
              child:Stack(
                children:[
                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    //Image.asset("assets/images/logo.png"),
+                    Expanded(
+                    child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Image.asset("assets/images/logo.png",width:100,height:200,fit: BoxFit.contain),
+                 ),
+                 ),
+                    Expanded(
+                    child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child:  Text("Selamat datang di aplikasi SISKA",style: TextStyle(fontSize: 18,color: Colors. white,),),
+                 ),
+                 ),
+                   
+                    
                   ],
                   ),
                ],
