@@ -200,39 +200,36 @@ class MyApp extends StatelessWidget {
         
        
         bottomNavigationBar: BottomNavigationBar(
-          unselectedLabelStyle: TextStyle(
-            color: Colors.grey, fontFamily: 'Montserrat', fontSize: 12.0),
-          showUnselectedLabels: true,
-          elevation: 0,
+          unselectedItemColor:Colors.grey,
+          selectedItemColor: Color.fromARGB(255, 0, 133, 255),
+          elevation: 20,
           iconSize: 25,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
           
           items:[
           BottomNavigationBarItem (
             label: "Home",
             icon: Icon(
               Icons.home_outlined,
-              color: Colors.grey,
               ),
             ),
            BottomNavigationBarItem (
-            label: "",
+            label: "Layanan",
             icon: Icon(
-              Icons.assignment ,
-              color: Colors.grey,
+              Icons.assignment_outlined ,
               ),
             ),
            BottomNavigationBarItem (
-            label: "",
+            label: "Berita",
             icon: Icon(
               Icons.auto_stories_outlined ,
-              color: Colors.grey,
               ),
             ),
            BottomNavigationBarItem (
-            label: "",
+            label: "Profil",
             icon: Icon(
               Icons.person_outlined,
-              color: Colors.grey,
               ),
             ),
        ],
