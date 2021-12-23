@@ -19,16 +19,10 @@ if ($cekRowEmail < 1){
     return FALSE;
 } else {
     $cekPass = $cekEmail->fetch(PDO::FETCH_ASSOC);
-    if (password_verify($password, $cekPass['kata_sandi'])){
-        echo "Login Sukses";
-        return TRUE;
-    }else{
-        echo "Password yang anda masukkan salah!";
-        return FALSE;
-    }
-    
+    $result = password_verify($password, $cekPass['kata_sandi']);
+
+    echo json_encode([
+        'Success' => $result
+    ]);
 }
-
-
-
 }
