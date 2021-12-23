@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
                     Expanded(
                     child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child:  Text("SELAMAT DATANG DI APLIKASI SISKA",style: TextStyle(fontSize: 17,color: Colors. white,fontWeight: FontWeight.bold),),
+                    child:  Text("SELAMAT DATANG DI APLIKASI SISKA",style: TextStyle(fontSize: 18,color: Colors. white,fontWeight: FontWeight.bold),),
                  ),
                  ),
                   ],
@@ -58,13 +58,14 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
                   
                  ),
                   Container(
+                    
                    width: 60,
                    height: 60,
                    decoration: BoxDecoration(
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
@@ -91,7 +92,7 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
@@ -107,7 +108,7 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
@@ -132,7 +133,7 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
@@ -149,7 +150,7 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
@@ -165,7 +166,7 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
@@ -181,14 +182,17 @@ class MyApp extends StatelessWidget {
                          color: Colors.grey.withOpacity(0.5),
                          spreadRadius: 2,
                          blurRadius: 3,
-                         offset: Offset(0, 5), // changes position of shadow
+                         offset: Offset(0, 5), 
                       ),
                     ],
                    ),
                  ),
                ],
              ),
-             
+           ),
+           Padding( padding: const EdgeInsets.symmetric(horizontal:25,vertical:25 ),
+           child: Text("Berita hari ini",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+
            ),
           ], 
         ),
