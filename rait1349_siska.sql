@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 24 Des 2021 pada 14.36
+-- Waktu pembuatan: 24 Des 2021 pada 18.00
 -- Versi server: 10.2.41-MariaDB-cll-lve
 -- Versi PHP: 7.4.25
 
@@ -24,334 +24,334 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Akta Kelahiran`
+-- Struktur dari tabel `akta_kelahiran`
 --
 
-CREATE TABLE `Akta Kelahiran` (
+CREATE TABLE `akta_kelahiran` (
   `nama_negara` varchar(10) NOT NULL,
   `nomor_aktakelahiran` int(50) NOT NULL,
-  `STBLD` int(50) NOT NULL,
-  `Tempat Lahir` varchar(50) NOT NULL,
-  `Tanggal Lahir` int(50) NOT NULL,
-  `Tahun Lahir` int(50) NOT NULL,
-  `Nama Lengkap` varchar(100) NOT NULL,
-  `Keterangan Anak ke` varchar(50) NOT NULL,
-  `Ketetapan Tempat dibuat Akta Kelahiran` varchar(100) NOT NULL,
-  `Tanggal Keluarnya Akta Kelahiran` varchar(100) NOT NULL,
-  `Tahun Keluarnya Akta Kelahiran` varchar(100) NOT NULL,
-  `Keterangan Kepala Dinas Kependudukan dan Pencatatan Sipil` varchar(100) NOT NULL,
-  `Tanda Tangan atau Cap dari KBK dan CSDKB` text NOT NULL,
-  `Nama Kepala Dinas Kependudukan dan Pencatatan Sipil` varchar(1000) NOT NULL,
-  `NIP Kepala Dinas Kependudukan dan Pencatatan Sipil` int(100) NOT NULL
+  `stbld` int(50) NOT NULL,
+  `tempat_lahir` varchar(50) NOT NULL,
+  `tanggal_lahir` int(50) NOT NULL,
+  `tahun_lahir` int(50) NOT NULL,
+  `nama_lengkap` varchar(100) NOT NULL,
+  `keterangan_anakke` varchar(50) NOT NULL,
+  `ketetapantempat_dibuataktakelahiran` varchar(100) NOT NULL,
+  `tanggalkeluar_aktakelahiran` varchar(100) NOT NULL,
+  `tahunkeluar_aktakelahiran` varchar(100) NOT NULL,
+  `keterangankepaladinaskependudukan_danpencatatansipil` varchar(100) NOT NULL,
+  `tandatangan_KBKdanCSDKB` text NOT NULL,
+  `namakepaladinaskependudukan_danpencatatansipil` varchar(1000) NOT NULL,
+  `nipkepaladinaskependudukan_danpencatatansipil` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Domisili Penduduk`
+-- Struktur dari tabel `domisili_penduduk`
 --
 
-CREATE TABLE `Domisili Penduduk` (
-  `Nama Desa` varchar(100) NOT NULL,
-  `Nama Kecamatan` varchar(100) NOT NULL,
-  `Nama Kabupaten` varchar(100) NOT NULL,
-  `Nama yang akan diisi di Domisili` varchar(50) NOT NULL,
-  `NIK domisili` int(50) NOT NULL,
-  `Tempat dan tanggal lahir domisili` varchar(100) NOT NULL,
-  `Agama` varchar(10) NOT NULL,
-  `Kewarganegaraan` varchar(20) NOT NULL,
-  `Pekerjaan` varchar(100) NOT NULL,
-  `Alamat domisili` varchar(500) NOT NULL,
-  `Tempat domisili` varchar(100) NOT NULL,
-  `Desa domisili` varchar(100) NOT NULL,
-  `Waktu Keluarnya Surat` varchar(100) NOT NULL,
-  `Keterangan Asal Daerah Kepala Desa` varchar(1000) NOT NULL,
-  `Tanda Tangan Kepala Desa` text NOT NULL,
-  `Nama Kepala Desa` varchar(100) NOT NULL,
-  `NIP Kepala Desa` int(100) NOT NULL,
-  `Pemohon` varchar(1000) NOT NULL,
-  `Tanda Tangan Pemohon atau User` varchar(100) NOT NULL,
-  `Nama Pemohon atau User` varchar(1000) NOT NULL
+CREATE TABLE `domisili_penduduk` (
+  `nama_desa` varchar(100) NOT NULL,
+  `nama_kecamatan` varchar(100) NOT NULL,
+  `nama_kabupaten` varchar(100) NOT NULL,
+  `namayangakandiisi_dalamdomisili` varchar(50) NOT NULL,
+  `nik_domisili` int(50) NOT NULL,
+  `tempatdan_tanggallahirdomisili` varchar(100) NOT NULL,
+  `agama` varchar(10) NOT NULL,
+  `kewarganegaraan` varchar(20) NOT NULL,
+  `pekerjaan` varchar(100) NOT NULL,
+  `alamat_domisili` varchar(500) NOT NULL,
+  `tempat_domisili` varchar(100) NOT NULL,
+  `desa_domisili` varchar(100) NOT NULL,
+  `waktukeluar_surat` varchar(100) NOT NULL,
+  `keteranganasaldaerah_kepaladesa` varchar(1000) NOT NULL,
+  `tandatangan_kepaladesa` text NOT NULL,
+  `nama_kepaladesa` varchar(100) NOT NULL,
+  `nip_kepaladesa` int(100) NOT NULL,
+  `pemohon` varchar(1000) NOT NULL,
+  `tandatangan_pemohonatauuser` varchar(100) NOT NULL,
+  `nama_pemohonatauuser` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Form Tautan serta Layanan SISKA Mobile ke Desa`
+-- Struktur dari tabel `formtautansertalayanan_siskamobilekedesa`
 --
 
-CREATE TABLE `Form Tautan serta Layanan SISKA Mobile ke Desa` (
-  `NIK User` int(50) NOT NULL,
-  `Fitur Pilih Desa` varchar(100) NOT NULL,
-  `Nomor Kartu Keluarga User` int(50) NOT NULL,
-  `Upload Image KTP User` blob NOT NULL,
-  `Upload Image Selfie KTP User` blob NOT NULL,
-  `Submit Form Tautan Desa` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+CREATE TABLE `formtautansertalayanan_siskamobilekedesa` (
+  `nik_user` int(50) NOT NULL,
+  `fitur_pilihdesa` varchar(100) NOT NULL,
+  `nomorkartukeluarga_user` int(50) NOT NULL,
+  `uploadimage_ktpuser` blob NOT NULL,
+  `uploadimage_selfiektpuser` blob NOT NULL,
+  `submitform_tautandesa` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Homepage SISKA`
+-- Struktur dari tabel `homepage_siska`
 --
 
-CREATE TABLE `Homepage SISKA` (
-  `Menu Profil` text NOT NULL
+CREATE TABLE `homepage_siska` (
+  `menu_profil` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Kartu Keluarga`
+-- Struktur dari tabel `kartu_keluarga`
 --
 
-CREATE TABLE `Kartu Keluarga` (
-  `Nomor KK` int(100) NOT NULL,
-  `Nama Kepala Keluarga` varchar(1000) NOT NULL,
-  `Alamat KK` varchar(10000) NOT NULL,
-  `RT/RW` int(50) NOT NULL,
-  `Desa/Kelurahan` varchar(1000) NOT NULL,
-  `Kecamatan` varchar(1000) NOT NULL,
-  `Kabupaten/Kota` varchar(1000) NOT NULL,
-  `Kode Pos` int(100) NOT NULL,
-  `Provinsi` varchar(1000) NOT NULL,
-  `Nomor Urut Keluarga` int(50) NOT NULL,
-  `Nama Lengkap masing masing kepala dan anggota keluarga` longtext NOT NULL,
-  `NIK` int(100) NOT NULL,
-  `Jenis Kelamin masing masing kepala dan anggota keluarga` longtext NOT NULL,
-  `Tempat Lahir masing masing kepala dan anggota keluarga` longtext NOT NULL,
-  `Agama masing masing kepala dan anggota keluarga` varchar(1000) NOT NULL,
-  `Pendidikan masing masing kepala dan anggota keluarga` varchar(10000) NOT NULL,
-  `Jenis pekerjaan masing masing kepala dan anggota keluarga` varchar(10000) NOT NULL,
-  `Nomor Urut Status dan Data data lain dalam KK` int(10) NOT NULL,
-  `Status Perkawinan Keluarga` varchar(1000) NOT NULL,
-  `Status Hubungan Keluarga` varchar(1000) NOT NULL,
-  `Kewarganegaraan` varchar(1000) NOT NULL,
-  `Nomor Paspor` int(100) NOT NULL,
-  `Nomor KITAS/KITAB` int(100) NOT NULL,
-  `Nama Ayah dari Kepala dan Anggota Keluarga` mediumtext NOT NULL,
-  `Nama Ibu dari Kepala dan Anggota Keluarga` mediumtext NOT NULL,
-  `Keluaran Tanggal` int(50) NOT NULL,
-  `Lembaran` varchar(1000) NOT NULL,
-  `Tanda tangan Kepala Keluarga` text NOT NULL,
-  `Nama Kepala Keluarga dibawah tanda tangan kepala keluarga` varchar(100) NOT NULL,
-  `Keterangan Asal Kepala Dinas Kependudukan Pencatatan Sipil` varchar(1000) NOT NULL,
-  `Tanda tangan Kepala Dinas Kependudukan dan Catatan Sipil` text NOT NULL,
-  `QR Code KK terbaru` blob NOT NULL,
-  `Nama Kepala Dinas Kependudukan dan Catatan Sipil` varchar(100) NOT NULL,
-  `NIP Kepala Dinas Kependudukan dan Catatan Sipil Kota` int(100) NOT NULL
+CREATE TABLE `kartu_keluarga` (
+  `nomor_kk` int(100) NOT NULL,
+  `nama_kepalakeluarga` varchar(1000) NOT NULL,
+  `alamat_kk` varchar(10000) NOT NULL,
+  `rt_rw` int(50) NOT NULL,
+  `desa_kelurahan` varchar(1000) NOT NULL,
+  `kecamatan` varchar(1000) NOT NULL,
+  `kabupaten_kota` varchar(1000) NOT NULL,
+  `kode_pos` int(100) NOT NULL,
+  `provinsi` varchar(1000) NOT NULL,
+  `nomor_urutkeluarga` int(50) NOT NULL,
+  `namalengkapmasingmasing_kepaladananggotakeluarga` longtext NOT NULL,
+  `nik` int(100) NOT NULL,
+  `jeniskelaminmasingmasing_kepaladananggotakeluarga` longtext NOT NULL,
+  `tempatlahirmasingmasing_kepaladananggotakeluarga` longtext NOT NULL,
+  `agamamasingmasing_kepaladananggotakeluarga` varchar(1000) NOT NULL,
+  `pendidikanmasingmasing_kepaladananggotakeluarga` varchar(10000) NOT NULL,
+  `jenispekerjaanmasingmasing_kepaladananggotakeluarga` varchar(10000) NOT NULL,
+  `nourutstatusdan_datalaindalamkk` int(10) NOT NULL,
+  `statusperkawinan_keluarga` varchar(1000) NOT NULL,
+  `statushubungan_keluarga` varchar(1000) NOT NULL,
+  `kewarganegaraan` varchar(1000) NOT NULL,
+  `nomor_paspor` int(100) NOT NULL,
+  `nomor_kitasataukitab` int(100) NOT NULL,
+  `namaayahdari_kepaladananggotakeluarga` mediumtext NOT NULL,
+  `namaibudari_kepaladananggotakeluarga` mediumtext NOT NULL,
+  `keluaran_tanggal` int(50) NOT NULL,
+  `lembaran` varchar(1000) NOT NULL,
+  `tandatangan_kepalakeluarga` text NOT NULL,
+  `namakepalakeluarga_dibawahtandatangankepalakeluarga` varchar(100) NOT NULL,
+  `keteranganasalkepaladinaskependudukan_danpencatatansipil` varchar(1000) NOT NULL,
+  `tandatangankepaladinaskependudukan_dancatatansipil` text NOT NULL,
+  `qrcode_kkterbaru` blob NOT NULL,
+  `namakepaladinas_kependudukandancatatansipil` varchar(100) NOT NULL,
+  `nipkepaladinas_kependudukandancatatansipilkota` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Layanan Surat SISKA`
+-- Struktur dari tabel `layanansurat_siska`
 --
 
-CREATE TABLE `Layanan Surat SISKA` (
-  `Akta Kelahiran` longtext NOT NULL,
-  `Domisili Penduduk SISKA Mobile` varchar(3000) NOT NULL,
-  `Surat Izin Usaha` longtext NOT NULL,
-  `Kartu Keluarga` longtext NOT NULL,
-  `Surat Keterangan Tidak Mampu` longtext NOT NULL,
-  `Surat Keterangan Berpergian` longtext NOT NULL,
-  `Surat Pengantar KTP` longtext NOT NULL,
-  `Surat Keterangan Catatan Kepolisian` longtext NOT NULL,
-  `Surat Pindah` longtext NOT NULL,
-  `Surat Tempat Usaha` longtext NOT NULL
+CREATE TABLE `layanansurat_siska` (
+  `akta_kelahiran` longtext NOT NULL,
+  `domisilipenduduk_siskamobile` varchar(3000) NOT NULL,
+  `surat_izinusaha` longtext NOT NULL,
+  `kartu_keluarga` longtext NOT NULL,
+  `suratketerangan_tidakmampu` longtext NOT NULL,
+  `suratketerangan_berpergian` longtext NOT NULL,
+  `suratpengantar_ktp` longtext NOT NULL,
+  `suratketerangan_catatankepolisian` longtext NOT NULL,
+  `surat_pindah` longtext NOT NULL,
+  `surat_tempatusaha` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Layout Konfirmasi SISKA`
+-- Struktur dari tabel `layoutkonfirmasi_siska`
 --
 
-CREATE TABLE `Layout Konfirmasi SISKA` (
-  `Data Kembali ke Homepage` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+CREATE TABLE `layoutkonfirmasi_siska` (
+  `datakembali_kehomepage` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Login SISKA`
+-- Struktur dari tabel `login_siska`
 --
 
-CREATE TABLE `Login SISKA` (
-  `User` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
-  `Submit` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `Data Submit` text NOT NULL
+CREATE TABLE `login_siska` (
+  `user` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `submit` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `data_submit` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Platform Pencetakan Surat`
+-- Struktur dari tabel `platform_pencetakansurat`
 --
 
-CREATE TABLE `Platform Pencetakan Surat` (
-  `Image Pencetakan Surat untuk User` blob NOT NULL
+CREATE TABLE `platform_pencetakansurat` (
+  `imagepencetakansurat_untukuser` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Profil Admin SISKA`
+-- Struktur dari tabel `profilakunaplikasi_siskamobile`
 --
 
-CREATE TABLE `Profil Admin SISKA` (
-  `Image Admin Desa` blob NOT NULL,
-  `Username Admin` varchar(50) NOT NULL,
-  `Email Admin` varchar(50) NOT NULL,
-  `Nomor Telepon Admin SISKA` int(50) NOT NULL,
-  `Setting Akun Admin Desa` text NOT NULL
+CREATE TABLE `profilakunaplikasi_siskamobile` (
+  `image_userprofil` blob NOT NULL,
+  `username_profilsiska` varchar(50) NOT NULL,
+  `email_profil` varchar(50) NOT NULL,
+  `nomortelepon_user` int(50) NOT NULL,
+  `setting_akundata` text NOT NULL,
+  `submit_tautanakun` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Profil Akun Aplikasi SISKA Mobile`
+-- Struktur dari tabel `profilakunsiskamobile_yangsudahtertaut`
 --
 
-CREATE TABLE `Profil Akun Aplikasi SISKA Mobile` (
-  `Image User Profil` blob NOT NULL,
-  `Username Profil SISKA` varchar(50) NOT NULL,
-  `Email Profil` varchar(50) NOT NULL,
-  `Nomor Telepon User` int(50) NOT NULL,
-  `Setting Akun Data` text NOT NULL,
-  `Submit Tautan Akun` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+CREATE TABLE `profilakunsiskamobile_yangsudahtertaut` (
+  `image_user` blob NOT NULL,
+  `username_siska` varchar(50) NOT NULL,
+  `emailuser_yangsudahtertaut` varchar(50) NOT NULL,
+  `nomorteleponakun_sudahtertaut` int(50) NOT NULL,
+  `tampilandata_desasiska` varchar(100) NOT NULL,
+  `biodata_kependudukan` text NOT NULL,
+  `setting_akundone` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Profil Akun SISKA Mobile yang sudah tertaut`
+-- Struktur dari tabel `profil_adminsiska`
 --
 
-CREATE TABLE `Profil Akun SISKA Mobile yang sudah tertaut` (
-  `Image User` blob NOT NULL,
-  `Username SISKA` varchar(50) NOT NULL,
-  `Email User yang sudah tertaut` varchar(50) NOT NULL,
-  `Nomor Telepon Akun sudah tertaut` int(50) NOT NULL,
-  `Tampilan Data Desa SISKA` varchar(100) NOT NULL,
-  `Biodata Kependudukan` text NOT NULL,
-  `Setting Akun Done` text NOT NULL
+CREATE TABLE `profil_adminsiska` (
+  `imageadmin_desa` blob NOT NULL,
+  `username_admin` varchar(50) NOT NULL,
+  `email_admin` varchar(50) NOT NULL,
+  `nomortelepon_adminsiska` int(50) NOT NULL,
+  `settingakun_admindesa` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `SignUp SISKA`
+-- Struktur dari tabel `signup_siska`
 --
 
-CREATE TABLE `SignUp SISKA` (
-  `Nama Lengkap Data` varchar(50) NOT NULL,
-  `Username` varchar(20) NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Password` varchar(20) NOT NULL,
-  `Submit Akun` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+CREATE TABLE `signup_siska` (
+  `namalengkap_data` varchar(50) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `submit_akun` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Surat Izin Usaha`
+-- Struktur dari tabel `suratizin_usaha`
 --
 
-CREATE TABLE `Surat Izin Usaha` (
-  `Nama Perusahaan atau tempat bekerja` varchar(1000) NOT NULL,
-  `Nomor Induk Berusaha (NIB)` int(100) NOT NULL,
-  `Alamat Perusahaan atau tempat bekerja` varchar(1000) NOT NULL,
-  `Nama KBLI` varchar(10000) NOT NULL,
-  `Kode KBLI` int(100) NOT NULL,
-  `Alamat Lengkap Usaha` mediumtext NOT NULL,
-  `Alamat Singkat Usaha` varchar(1000) NOT NULL,
-  `Desa atau Kelurahan Usaha` varchar(1000) NOT NULL,
-  `Kecamatan Usaha` varchar(1000) NOT NULL,
-  `Kabupaten/Kota Usaha` varchar(1000) NOT NULL,
-  `Provinsi Usaha` varchar(100) NOT NULL,
-  `Pernyataan Waktu Keluaran Surat` varchar(1000) NOT NULL,
-  `Code QR` blob NOT NULL
+CREATE TABLE `suratizin_usaha` (
+  `namaperusahaan_atautempatbekerja` varchar(1000) NOT NULL,
+  `nomorinduk_berusaha` int(100) NOT NULL,
+  `alamatperusahaan_atautempatbekerja` varchar(1000) NOT NULL,
+  `nama_kbli` varchar(10000) NOT NULL,
+  `kode_kbli` int(100) NOT NULL,
+  `alamatlengkap_usaha` mediumtext NOT NULL,
+  `alamatsingkat_usaha` varchar(1000) NOT NULL,
+  `desaataukelurahan_usaha` varchar(1000) NOT NULL,
+  `kecamatan_usaha` varchar(1000) NOT NULL,
+  `kabupatenataukota_usaha` varchar(1000) NOT NULL,
+  `provinsi_usaha` varchar(100) NOT NULL,
+  `pernyataanwaktu_keluaransurat` varchar(1000) NOT NULL,
+  `code_qr` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Surat Keterangan Berpergian`
+-- Struktur dari tabel `suratketerangan_berpergian`
 --
 
-CREATE TABLE `Surat Keterangan Berpergian` (
-  `Nomor SKIB` varchar(100) NOT NULL,
-  `Nama Lengkap User mengajukan surat` varchar(1000) NOT NULL,
-  `Jenis Kelamin User yang mengajukan surat` varchar(100) NOT NULL,
-  `Tempat dan Tanggal Lahir User yang mengajukan surat` varchar(1000) NOT NULL,
-  `Status Perkawinan User yang mengajukan Surat` varchar(100) NOT NULL,
-  `Kewarganegaraan atau Warga Negara` varchar(100) NOT NULL,
-  `Agama` varchar(100) NOT NULL,
-  `Pekerjaan User yang mengajukan Surat` varchar(1000) NOT NULL,
-  `Alamat Lengkap User yang mengajukan surat` varchar(10000) NOT NULL,
-  `Keterangan dan Penjelasan Berpergian` mediumtext NOT NULL,
-  `Waktu Keluarnya Surat Berpergian` varchar(1000) NOT NULL,
-  `Pernyataan Asal Kepala Desa` varchar(1000) NOT NULL,
-  `Tanda Tangan Kepala Desa setempat` text NOT NULL,
-  `Nama Lengkap Kepala Desa` varchar(1000) NOT NULL,
-  `NIP Kepala Desa` int(100) NOT NULL
+CREATE TABLE `suratketerangan_berpergian` (
+  `nomor_skib` varchar(100) NOT NULL,
+  `namalengkapuser_yangmengajukansurat` varchar(1000) NOT NULL,
+  `jeniskelaminuser_yangmengajukansurat` varchar(100) NOT NULL,
+  `tempatdantanggallahiruser_yangmengajukansurat` varchar(1000) NOT NULL,
+  `statusperkawinanuser_yangmengajukansurat` varchar(100) NOT NULL,
+  `kewarganegaraanatau_warganegara` varchar(100) NOT NULL,
+  `agama` varchar(100) NOT NULL,
+  `pekerjaanuser_yangmengajukansurat` varchar(1000) NOT NULL,
+  `alamatlengkapuser_yangmengajukansurat` varchar(10000) NOT NULL,
+  `keterangandan_penjelasanberpergian` mediumtext NOT NULL,
+  `waktukeluarnya_suratberpergian` varchar(1000) NOT NULL,
+  `pernyataanasal_kepaladesa` varchar(1000) NOT NULL,
+  `tandatangan_kepaladesasetempat` text NOT NULL,
+  `namalengkap_kepaladesa` varchar(1000) NOT NULL,
+  `nip_kepaladesa` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Surat Keterangan Tidak Mampu`
+-- Struktur dari tabel `suratketerangan_tidakmampu`
 --
 
-CREATE TABLE `Surat Keterangan Tidak Mampu` (
-  `Nama User pada Surat` varchar(100) NOT NULL,
-  `Tempat/Tanggal Lahir user yang mengajukan surat` varchar(1000) NOT NULL,
-  `Jenis Kelamin User` varchar(100) NOT NULL,
-  `Pekerjaan user atau orang yang mengajukan surat` varchar(1000) NOT NULL,
-  `Agama User atau orang yang mengajukan surat` varchar(100) NOT NULL,
-  `User atau orang yang mengajukan surat` varchar(1000) NOT NULL,
-  `Status Perkawinan User atau orang yang mengajukan surat` varchar(1000) NOT NULL,
-  `Alamat User atau orang yang mengajukan surat` longtext NOT NULL,
-  `Nama Ayah atau Bapak dari user` varchar(10000) NOT NULL,
-  `Umur Ayah dalam surat keterangan ini` varchar(100) NOT NULL,
-  `Pekerjaan ayah atau bapak user` varchar(100) NOT NULL,
-  `Alamat lengkap ayah atau bapak` mediumtext NOT NULL,
-  `Nama Ibu dalam surat` varchar(1000) NOT NULL,
-  `Umur Ibu dalam Surat Keterangan Tidak Mampu ini` int(100) NOT NULL,
-  `Alamat lengkap ibu dalam surat` longtext NOT NULL,
-  `Waktu Keluarnya Surat` varchar(1000) NOT NULL,
-  `Keterangan Asal Daerah Kepala Desa` varchar(100) NOT NULL,
-  `Tanda Tangan Kepala Desa setempat` text NOT NULL,
-  `Nama Kepala Desa pada bawah tanda tangan` varchar(1000) NOT NULL,
-  `Keterangan Asal Daerah Camat` varchar(1000) NOT NULL,
-  `Tanda Tangan Camat daerah` text NOT NULL,
-  `Nama Camat yang tertera dibawah tanda tangan camat` varchar(1000) NOT NULL,
-  `NIP Camat` int(100) NOT NULL
+CREATE TABLE `suratketerangan_tidakmampu` (
+  `namauser_padasurat` varchar(100) NOT NULL,
+  `tempat/tanggallahiruser_yangmengajukansurat` varchar(1000) NOT NULL,
+  `jeniskelamin_user` varchar(100) NOT NULL,
+  `pekerjaanuser_atauorangyangmengajukansurat` varchar(1000) NOT NULL,
+  `agamauser_atauorangyangmengajukansurat` varchar(100) NOT NULL,
+  `useratauorang_yangmengajukansurat` varchar(1000) NOT NULL,
+  `statusperkawinanuser_atauorangyangmengajukansurat` varchar(1000) NOT NULL,
+  `alamatuser_atauorangyangmengajukansurat` longtext NOT NULL,
+  `namaayah_ataubapakuser` varchar(10000) NOT NULL,
+  `umurayah_ataubapakdalamsuratketeranganini` varchar(100) NOT NULL,
+  `pekerjaanayah_ataubapakuser` varchar(100) NOT NULL,
+  `alamatlengkap_ayahataubapakuser` mediumtext NOT NULL,
+  `namaibuuser_dalamsurat` varchar(1000) NOT NULL,
+  `umuribuuser_dalamsuratketeranganini` int(100) NOT NULL,
+  `alamatlengkap_ibuuserdalamsurat` longtext NOT NULL,
+  `waktukeluarnya_surat` varchar(1000) NOT NULL,
+  `keteranganasaldaerah_kepaladesa` varchar(100) NOT NULL,
+  `tandatangan_kepaladesasetempat` text NOT NULL,
+  `namakepaladesa_padabawahtandatangan` varchar(1000) NOT NULL,
+  `keteranganasal_daerahcamat` varchar(1000) NOT NULL,
+  `tandatangan_camatdaerah` text NOT NULL,
+  `namacamatyang_terteradibawahtandatangancamat` varchar(1000) NOT NULL,
+  `nip_camat` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Tampilan Layanan SISKA Mobile`
+-- Struktur dari tabel `tampilanlayanan_siskamobile`
 --
 
-CREATE TABLE `Tampilan Layanan SISKA Mobile` (
-  `Layanan Surat` text NOT NULL,
-  `Kontak Penting User` varchar(1000) NOT NULL,
-  `Data Kependudukan` longtext NOT NULL,
-  `Administrasi User SISKA` longtext NOT NULL
+CREATE TABLE `tampilanlayanan_siskamobile` (
+  `layanan_surat` text NOT NULL,
+  `kontakpenting_user` varchar(1000) NOT NULL,
+  `data_kependudukan` longtext NOT NULL,
+  `administrasiuser_siska` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `Transformasi Kerja Desa Digital dan Tautan Akun ke Desa`
+-- Struktur dari tabel `transformasikerjadesadigitaldan_tautanakunkedesa`
 --
 
-CREATE TABLE `Transformasi Kerja Desa Digital dan Tautan Akun ke Desa` (
-  `Data Penautan Akun ke Layanan SISKA` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+CREATE TABLE `transformasikerjadesadigitaldan_tautanakunkedesa` (
+  `datapenautanakun_kelayanansiska` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -385,73 +385,87 @@ INSERT INTO `user` (`id`, `nama_lengkap`, `kata_sandi`, `alamat_email`, `no_tele
 --
 
 --
--- Indeks untuk tabel `Akta Kelahiran`
+-- Indeks untuk tabel `akta_kelahiran`
 --
-ALTER TABLE `Akta Kelahiran`
+ALTER TABLE `akta_kelahiran`
   ADD PRIMARY KEY (`nomor_aktakelahiran`),
-  ADD UNIQUE KEY `STBLD` (`STBLD`),
-  ADD UNIQUE KEY `NIP Kepala Dinas Kependudukan dan Pencatatan Sipil` (`NIP Kepala Dinas Kependudukan dan Pencatatan Sipil`);
+  ADD UNIQUE KEY `STBLD` (`stbld`),
+  ADD UNIQUE KEY `NIP Kepala Dinas Kependudukan dan Pencatatan Sipil` (`nipkepaladinaskependudukan_danpencatatansipil`);
 
 --
--- Indeks untuk tabel `Domisili Penduduk`
+-- Indeks untuk tabel `domisili_penduduk`
 --
-ALTER TABLE `Domisili Penduduk`
-  ADD PRIMARY KEY (`NIK domisili`),
-  ADD UNIQUE KEY `NIP Kepala Desa` (`NIP Kepala Desa`);
+ALTER TABLE `domisili_penduduk`
+  ADD PRIMARY KEY (`nik_domisili`),
+  ADD UNIQUE KEY `NIP Kepala Desa` (`nip_kepaladesa`);
 
 --
--- Indeks untuk tabel `Form Tautan serta Layanan SISKA Mobile ke Desa`
+-- Indeks untuk tabel `formtautansertalayanan_siskamobilekedesa`
 --
-ALTER TABLE `Form Tautan serta Layanan SISKA Mobile ke Desa`
-  ADD PRIMARY KEY (`NIK User`);
+ALTER TABLE `formtautansertalayanan_siskamobilekedesa`
+  ADD PRIMARY KEY (`nik_user`);
 
 --
--- Indeks untuk tabel `Kartu Keluarga`
+-- Indeks untuk tabel `kartu_keluarga`
 --
-ALTER TABLE `Kartu Keluarga`
-  ADD PRIMARY KEY (`NIP Kepala Dinas Kependudukan dan Catatan Sipil Kota`);
+ALTER TABLE `kartu_keluarga`
+  ADD PRIMARY KEY (`nipkepaladinas_kependudukandancatatansipilkota`),
+  ADD UNIQUE KEY `nik` (`nik`),
+  ADD UNIQUE KEY `nomor_kk` (`nomor_kk`);
 
 --
--- Indeks untuk tabel `Layanan Surat SISKA`
+-- Indeks untuk tabel `layanansurat_siska`
 --
-ALTER TABLE `Layanan Surat SISKA`
-  ADD PRIMARY KEY (`Domisili Penduduk SISKA Mobile`);
+ALTER TABLE `layanansurat_siska`
+  ADD PRIMARY KEY (`domisilipenduduk_siskamobile`);
 
 --
--- Indeks untuk tabel `Profil Admin SISKA`
+-- Indeks untuk tabel `login_siska`
 --
-ALTER TABLE `Profil Admin SISKA`
-  ADD PRIMARY KEY (`Email Admin`);
+ALTER TABLE `login_siska`
+  ADD PRIMARY KEY (`password`);
 
 --
--- Indeks untuk tabel `Profil Akun SISKA Mobile yang sudah tertaut`
+-- Indeks untuk tabel `profilakunsiskamobile_yangsudahtertaut`
 --
-ALTER TABLE `Profil Akun SISKA Mobile yang sudah tertaut`
-  ADD PRIMARY KEY (`Email User yang sudah tertaut`);
+ALTER TABLE `profilakunsiskamobile_yangsudahtertaut`
+  ADD PRIMARY KEY (`emailuser_yangsudahtertaut`);
 
 --
--- Indeks untuk tabel `Surat Izin Usaha`
+-- Indeks untuk tabel `profil_adminsiska`
 --
-ALTER TABLE `Surat Izin Usaha`
-  ADD PRIMARY KEY (`Nomor Induk Berusaha (NIB)`);
+ALTER TABLE `profil_adminsiska`
+  ADD PRIMARY KEY (`email_admin`);
 
 --
--- Indeks untuk tabel `Surat Keterangan Berpergian`
+-- Indeks untuk tabel `signup_siska`
 --
-ALTER TABLE `Surat Keterangan Berpergian`
-  ADD PRIMARY KEY (`NIP Kepala Desa`,`Nomor SKIB`);
+ALTER TABLE `signup_siska`
+  ADD PRIMARY KEY (`password`);
 
 --
--- Indeks untuk tabel `Surat Keterangan Tidak Mampu`
+-- Indeks untuk tabel `suratizin_usaha`
 --
-ALTER TABLE `Surat Keterangan Tidak Mampu`
-  ADD PRIMARY KEY (`NIP Camat`);
+ALTER TABLE `suratizin_usaha`
+  ADD PRIMARY KEY (`nomorinduk_berusaha`);
 
 --
--- Indeks untuk tabel `Tampilan Layanan SISKA Mobile`
+-- Indeks untuk tabel `suratketerangan_berpergian`
 --
-ALTER TABLE `Tampilan Layanan SISKA Mobile`
-  ADD PRIMARY KEY (`Kontak Penting User`);
+ALTER TABLE `suratketerangan_berpergian`
+  ADD PRIMARY KEY (`nip_kepaladesa`,`nomor_skib`);
+
+--
+-- Indeks untuk tabel `suratketerangan_tidakmampu`
+--
+ALTER TABLE `suratketerangan_tidakmampu`
+  ADD PRIMARY KEY (`nip_camat`);
+
+--
+-- Indeks untuk tabel `tampilanlayanan_siskamobile`
+--
+ALTER TABLE `tampilanlayanan_siskamobile`
+  ADD PRIMARY KEY (`kontakpenting_user`);
 
 --
 -- Indeks untuk tabel `user`
