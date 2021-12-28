@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 24 Des 2021 pada 18.00
+-- Waktu pembuatan: 28 Des 2021 pada 09.17
 -- Versi server: 10.2.41-MariaDB-cll-lve
--- Versi PHP: 7.4.25
+-- Versi PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -256,6 +256,33 @@ CREATE TABLE `signup_siska` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `suratizin_tempatusaha`
+--
+
+CREATE TABLE `suratizin_tempatusaha` (
+  `image_kabupatenatauprovinsi` blob NOT NULL,
+  `keteranganpemerintahprovinsi_dandinaspelayananperijinanterpadu` varchar(1000) NOT NULL,
+  `keterangan_suratizintempatusaha` varchar(100) NOT NULL,
+  `nomor_suratizintempatusaha` int(100) NOT NULL,
+  `nama_perusahaanatautoko` varchar(1000) NOT NULL,
+  `alamatlengkap_perusahaanatautoko` longtext NOT NULL,
+  `bidang_usaha` varchar(1000) NOT NULL,
+  `namapenanggungjawab_ataupimpinandandirektur` varchar(1000) NOT NULL,
+  `luas_tempatusaha` varchar(100) NOT NULL,
+  `berlaku_sdtanggal` varchar(100) NOT NULL,
+  `pernyataandanpenjelasan_keterangansitu` longtext NOT NULL,
+  `ketentuan_berlakunyasuratizintempatusaha` varchar(1000) NOT NULL,
+  `ketetapantempat_suratizintempatusahadikeluarkan` varchar(1000) NOT NULL,
+  `waktu_keluaransitu` varchar(1000) NOT NULL,
+  `keterangan_kepaladesadaerah` varchar(1000) NOT NULL,
+  `tandatangan_ataucapbesertamateraikepaladesa` text NOT NULL,
+  `namalengkap_kepaladesa` varchar(1000) NOT NULL,
+  `nip_kepaladesa` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `suratizin_usaha`
 --
 
@@ -302,6 +329,39 @@ CREATE TABLE `suratketerangan_berpergian` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `suratketerangan_catatankepolisian`
+--
+
+CREATE TABLE `suratketerangan_catatankepolisian` (
+  `nomor_skck` int(100) NOT NULL,
+  `keterangan_kepolisiannridaerah` varchar(1000) NOT NULL,
+  `logo_skck` blob NOT NULL,
+  `pernyataan_skckpolicerecord` varchar(1000) NOT NULL,
+  `nomor_skckyanmas` varchar(1000) NOT NULL,
+  `nama_useryangmengajukanskck` varchar(1000) NOT NULL,
+  `jeniskelamin_useryangmengajukanskck` varchar(100) NOT NULL,
+  `kebangsaan_useryangmengajukanskck` varchar(100) NOT NULL,
+  `tempatdantanggallahir_useryangmengajukanskck` varchar(1000) NOT NULL,
+  `tempattinggalsekaranglengkap_useryangmengajukanskck` longtext NOT NULL,
+  `pekerjaan_useryangmengajukanskck` varchar(1000) NOT NULL,
+  `nomorktp_useryangmengajukanskck` int(100) NOT NULL,
+  `nomorpasporataukitasataupunkitap_useryangmengajukanskck` int(100) NOT NULL,
+  `rumus_sidikjari` varchar(1000) NOT NULL,
+  `pernyataandasar_suratdikeluarkan` longtext NOT NULL,
+  `keterangan_keperluan` varchar(1000) NOT NULL,
+  `berlaku_daritanggal` varchar(1000) NOT NULL,
+  `sampai_dengantanggal` varchar(1000) NOT NULL,
+  `foto3x4_useryangmengajukansuratskck` blob NOT NULL,
+  `dikeluarkan_suratdidaerah` varchar(100) NOT NULL,
+  `keterangandanpernyataan_kepalakepolisiandaerahatauresor` varchar(1000) NOT NULL,
+  `tandatangan_kepalakepolisandaerah` text NOT NULL,
+  `nama_kepalakepolisandaerah` varchar(100) NOT NULL,
+  `keterangankomisaris_dannrpkepolisian` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `suratketerangan_tidakmampu`
 --
 
@@ -329,6 +389,56 @@ CREATE TABLE `suratketerangan_tidakmampu` (
   `tandatangan_camatdaerah` text NOT NULL,
   `namacamatyang_terteradibawahtandatangancamat` varchar(1000) NOT NULL,
   `nip_camat` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `suratpindah_antarkabupatenkotaatauprovinsi`
+--
+
+CREATE TABLE `suratpindah_antarkabupatenkotaatauprovinsi` (
+  `keterangan_suratpindah` varchar(1000) NOT NULL,
+  `nomor_suratpindah` int(100) NOT NULL,
+  `nik_useryangmengajukansuratpindah` int(100) NOT NULL,
+  `namalengkap_useryangmengajukansuratpindah` varchar(1000) NOT NULL,
+  `nomorkartukeluarga_useryangmengajukansuratpindah` int(100) NOT NULL,
+  `namakepalakeluarga_useryangmengajukansuratpindah` varchar(1000) NOT NULL,
+  `alamatsekarang_useryangmengajukansuratpindah` varchar(1000) NOT NULL,
+  `alamattujuanpindah_useryangmengajukansuratpindah` varchar(1000) NOT NULL,
+  `jumlahkeluarga_yangpindah` varchar(100) NOT NULL,
+  `keterangan_permohonandanpenggunaansurat` longtext NOT NULL,
+  `suratpindah_keluaran` varchar(1000) NOT NULL,
+  `camat_daerah` varchar(100) NOT NULL,
+  `tandatangan_camatdaerah` text NOT NULL,
+  `nama_camatdaerah` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `surat_pengantarktp`
+--
+
+CREATE TABLE `surat_pengantarktp` (
+  `namapemerintah_kabupaten` varchar(100) NOT NULL,
+  `nama_kecamatan` varchar(100) NOT NULL,
+  `nama_desaataukotaataupundaerah` varchar(100) NOT NULL,
+  `nomor_surat` int(100) NOT NULL,
+  `keterangan_penandatangandaerah` varchar(1000) NOT NULL,
+  `namauser_yangmengajukansurat` varchar(1000) NOT NULL,
+  `tempatdantanggalahir_useryangmengajukansurat` varchar(1000) NOT NULL,
+  `jeniskelamin_user` varchar(100) NOT NULL,
+  `agama_user` varchar(100) NOT NULL,
+  `pekerjaanuser_yangmengajukansurat` varchar(1000) NOT NULL,
+  `statusperkawinan_user` varchar(100) NOT NULL,
+  `alamatlengkap_useryangmengajukansurat` mediumtext NOT NULL,
+  `pernyataanatau_konfirmasisurat` varchar(10000) NOT NULL,
+  `waktu_keluaransurat` varchar(1000) NOT NULL,
+  `kepaladesa_daerah` varchar(1000) NOT NULL,
+  `tandatangan_kepaladesa` text NOT NULL,
+  `nama_kepaladesa` varchar(1000) NOT NULL,
+  `nip_kepaladesa` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -444,6 +554,13 @@ ALTER TABLE `signup_siska`
   ADD PRIMARY KEY (`password`);
 
 --
+-- Indeks untuk tabel `suratizin_tempatusaha`
+--
+ALTER TABLE `suratizin_tempatusaha`
+  ADD PRIMARY KEY (`nip_kepaladesa`),
+  ADD UNIQUE KEY `UNIQUE` (`nomor_suratizintempatusaha`);
+
+--
 -- Indeks untuk tabel `suratizin_usaha`
 --
 ALTER TABLE `suratizin_usaha`
@@ -456,10 +573,31 @@ ALTER TABLE `suratketerangan_berpergian`
   ADD PRIMARY KEY (`nip_kepaladesa`,`nomor_skib`);
 
 --
+-- Indeks untuk tabel `suratketerangan_catatankepolisian`
+--
+ALTER TABLE `suratketerangan_catatankepolisian`
+  ADD PRIMARY KEY (`keterangankomisaris_dannrpkepolisian`),
+  ADD UNIQUE KEY `nomor_skck` (`nomor_skck`);
+
+--
 -- Indeks untuk tabel `suratketerangan_tidakmampu`
 --
 ALTER TABLE `suratketerangan_tidakmampu`
   ADD PRIMARY KEY (`nip_camat`);
+
+--
+-- Indeks untuk tabel `suratpindah_antarkabupatenkotaatauprovinsi`
+--
+ALTER TABLE `suratpindah_antarkabupatenkotaatauprovinsi`
+  ADD PRIMARY KEY (`nik_useryangmengajukansuratpindah`),
+  ADD UNIQUE KEY `nomorkartukeluarga_useryangmengajukansuratpindah` (`nomorkartukeluarga_useryangmengajukansuratpindah`);
+
+--
+-- Indeks untuk tabel `surat_pengantarktp`
+--
+ALTER TABLE `surat_pengantarktp`
+  ADD PRIMARY KEY (`nip_kepaladesa`),
+  ADD UNIQUE KEY `nomor_surat` (`nomor_surat`);
 
 --
 -- Indeks untuk tabel `tampilanlayanan_siskamobile`
