@@ -1,10 +1,12 @@
 <?php
 
-$db_name = "siska_db";
+$db_name = "rait1349_siska";
 $db_server = "localhost";
-$db_user = "root";
-$db_pass = "";
+$db_user = "rait1349_adminsiska";
+$db_pass = "iniAdminSiska123";
 
-$db = new PDO("mysql:host={$db_server};dbname={$db_name};charset=utf8", $db_user, $db_pass);
-$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+    $db = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+} catch (PDOException $e) {
+    die("Oopss... Gagal menyambung ke database : " . $e->getMessage());
+}
