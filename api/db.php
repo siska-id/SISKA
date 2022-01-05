@@ -1,9 +1,12 @@
 <?php
 
-$db_name = "siskadb";
+$db_name = "rait1349_siska";
 $db_server = "localhost";
-$db_user = "root";
-$db_pass = "";
+$db_user = "rait1349_adminsiska";
+$db_pass = "iniAdminSiska123";
 
-
-$conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name) or die("Oopss... Gagal menyambung ke Database!");
+try {
+    $db = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
+} catch (PDOException $e) {
+    die("Oopss... Gagal menyambung ke database : " . $e->getMessage());
+} 
