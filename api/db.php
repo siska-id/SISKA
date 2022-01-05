@@ -1,10 +1,9 @@
 <?php
 
-$db_name = "siska_db";
+$db_name = "siskadb";
 $db_server = "localhost";
 $db_user = "root";
 $db_pass = "";
 
-$db = new PDO("mysql:host={$db_server};dbname={$db_name};charset=utf8", $db_user, $db_pass);
-$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name) or die("Oopss... Gagal menyambung ke Database!");
