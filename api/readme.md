@@ -10,3 +10,4 @@ Rest API ini menggunakan PHP berbasis Object dan MySQL sebagai Database nya, ser
 * details.php (API untuk menampilkan detail suatu data)
 * list.php (API untuk menampilkan semua data yang ada dari Database)
 * update.php (API untuk memperbarui sebuah data) 
+* restapi.php (File yang menyimpan semua API)
