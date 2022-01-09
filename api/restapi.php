@@ -76,6 +76,7 @@ function register_user()
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         global $db;
         $fullname = filter_input(INPUT_POST, 'fullname', FILTER_SANITIZE_STRING);
+        $desauser = filter_input(INPUT_POST, 'desauser', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $noTelp = filter_input(INPUT_POST, 'telp', FILTER_SANITIZE_NUMBER_INT);
         $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
@@ -94,10 +95,11 @@ function register_user()
                 'message' => "Alamat Email atau No Telepon telah terdaftar!"
             );
         } else {
-            $query = $db->prepare("INSERT INTO userakun_siska (nama_lengkap, alamat_email, kata_sandi, no_telepon) VALUES (:fullname, :email, :pass ,:notelp)");
+            $query = $db->prepare("INSERT INTO userakun_siska (nama_lengkap, alamat_email, kata_sandi, no_telepon. desa_user) VALUES (:fullname, :email, :pass ,:notelp, :desauser)");
             $params = array(
                 ":fullname" => $fullname,
                 ":email" => $email,
+                ":desauser" => $desauser,
                 ":pass" => $password,
                 ":notelp" => $noTelp
             );
