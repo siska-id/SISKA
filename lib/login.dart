@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color.fromRGBO(51, 157, 255, 1),
         body: ListView(
+          physics: NeverScrollableScrollPhysics(),
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 0, vertical: 300),
-              height: 250,
+              margin: EdgeInsets.symmetric(horizontal: 0, vertical: 400),
+              height: 300,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(10)),
             ),
