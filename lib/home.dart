@@ -54,14 +54,18 @@ class MyApp extends StatelessWidget {
                 children: [
                   //1
                   Container(
-                     
-                    child:Center(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.account_box_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("Profil", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.account_box_outlined,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("Profil",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -82,15 +86,19 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   //2
-                 Container(
-                     
-                    child:Center(
+                  Container(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.assignment_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.assignment_outlined,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -111,15 +119,19 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   //3
-                 Container(
-                     
-                    child:Center(
+                  Container(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.assessment_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.assessment_outlined,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -141,14 +153,18 @@ class MyApp extends StatelessWidget {
                   ),
                   //4
                   Container(
-                     
-                    child:Center(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.contact_phone_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.contact_phone_outlined,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -178,14 +194,18 @@ class MyApp extends StatelessWidget {
                 children: [
                   //5
                   Container(
-                     
-                    child:Center(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.card_travel, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.card_travel,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -207,14 +227,18 @@ class MyApp extends StatelessWidget {
                   ),
                   //6
                   Container(
-                     
-                    child:Center(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.view_compact_rounded , size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.view_compact_rounded,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -236,14 +260,18 @@ class MyApp extends StatelessWidget {
                   ),
                   //7
                   Container(
-                     
-                    child:Center(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.desktop_windows_rounded, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.desktop_windows_rounded,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
@@ -265,14 +293,18 @@ class MyApp extends StatelessWidget {
                   ),
                   //8
                   Container(
-                     
-                    child:Center(
+                    child: Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 2, vertical: 4),
                         child: Column(
                           children: [
-                            Icon(Icons.assignment_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
+                            Icon(Icons.assignment_outlined,
+                                size: 33,
+                                color: Color.fromRGBO(51, 157, 255, 1)),
+                            Text("text",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(51, 157, 255, 1))),
                           ],
                         ),
                       ),
