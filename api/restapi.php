@@ -27,6 +27,33 @@ if (function_exists($_GET['function'])) {
 }
 
 
+
+#Function mengecek apakah user telah login
+function is_user_login()
+{
+    global $db;
+    $session = $_SESSION['login'];
+    if (isset($session)) {
+        $query = $db->prepare("SELECT * FROM userakun_siska WHERE alamat_email=:email");
+        $params = array(
+            ":email" => $session
+        );
+        $query->execute($params);
+        $fetchData = $query->fetch(PDO::FETCH_OBJ);
+        $response = array(
+            'status' => 1,
+            'message' => $session
+        );
+    } else {
+        $response = [
+            "status" => 0,
+            "message" => "User belum login, silahkan login terlebih dahulu!"
+        ];
+    }
+    echo json_encode($response);
+}
+
+
 # Function untuk Verifikasi masuk User.
 function login_user()
 {
@@ -89,13 +116,13 @@ function register_user()
         $query->execute($params);
         $count = $query->rowCount();
 
-        if ($count == TRUE) {
+        if ($count == 1) {
             $response = array(
-                'status' => FALSE,
+                'status' => 0,
                 'message' => "Alamat Email atau No Telepon telah terdaftar!"
             );
         } else {
-            $query = $db->prepare("INSERT INTO userakun_siska (nama_lengkap, alamat_email, kata_sandi, no_telepon. desa_user) VALUES (:fullname, :email, :pass ,:notelp, :desauser)");
+            $query = $db->prepare("INSERT INTO userakun_siska (nama_lengkap, alamat_email, kata_sandi, no_telepon, desa_user) VALUES (:fullname, :email, :pass ,:notelp, :desauser)");
             $params = array(
                 ":fullname" => $fullname,
                 ":email" => $email,
@@ -106,15 +133,34 @@ function register_user()
             $saved = $query->execute($params);
             if ($saved) {
                 $response = array(
-                    'status' => TRUE,
+                    'status' => 1,
                     'message' => "Registrasi user berhasil!"
                 );
             } else {
                 $response = array(
-                    'status' => FALSE,
+                    'status' => 0,
                     'message' => "Registrasi user gagal!"
                 );
             }
+        }
+    } else {
+        $response = array(
+            'status' => 0,
+            'message' => "Invalid Request Method!"
+        );
+    }
+    echo json_encode($response);
+}
+
+
+#Function untuk menambahkan/mendaftar akta kelahiran
+function insert_akta_kelahiran()
+{
+    if ($_SERVER['REQUEST_METHOD'] == "POST") { 
+        $data = file_get_contents("http://rkhalid.net/restapi.php?function=is_user_login");
+        $json = json_decode($data);
+        if ($json->status == 0) {
+            echo "Lanjut Isi Akta";
         }
     } else {
         $response = array(
