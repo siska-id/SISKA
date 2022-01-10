@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 06 Jan 2022 pada 00.07
+-- Waktu pembuatan: 10 Jan 2022 pada 14.22
 -- Versi server: 10.2.41-MariaDB-cll-lve
 -- Versi PHP: 7.4.27
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `aktakelahiran_siska` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `nama_negara` varchar(10) NOT NULL,
   `nomor_aktakelahiran` varchar(50) NOT NULL,
   `stbld` varchar(50) NOT NULL,
@@ -44,6 +45,158 @@ CREATE TABLE `aktakelahiran_siska` (
   `tandatangan_KBKdanCSDKB` text NOT NULL,
   `namakepaladinaskependudukan_danpencatatansipil` varchar(64) NOT NULL,
   `nipkepaladinaskependudukan_danpencatatansipil` int(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `dataagamastatistikkependudukakhusus_siska`
+--
+
+CREATE TABLE `dataagamastatistikkependudukakhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesaapadadatagama` varchar(65) NOT NULL,
+  `jenis_kelompokagama` varchar(20) NOT NULL,
+  `jumlah_masingmasingjeniskelompokagama` varchar(35) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompokagama` varchar(30) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompokagama` varchar(30) NOT NULL,
+  `jumlah_dataagama` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamdataagama` varchar(50) NOT NULL,
+  `totalkeseluruhan_dataagama` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `dataakseptorkbstatistikkhusus_siska`
+--
+
+CREATE TABLE `dataakseptorkbstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadataakseptorkb` varchar(65) NOT NULL,
+  `jenis_kelompokpadadataakseptorkb` varchar(40) NOT NULL,
+  `jumlah_masingmasingjeniskelompokakseptorkb` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokakseptorkb` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokakseptorkb` varchar(70) NOT NULL,
+  `jumlah_dataakseptorkb` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadadataakseptorkb` varchar(50) NOT NULL,
+  `totakeseluruhan_dataakseptorkb` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `dataaktakelahiranstatistikkhusus_siska`
+--
+
+CREATE TABLE `dataaktakelahiranstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadataaktakelahiran` varchar(65) NOT NULL,
+  `jenis_kelompokpadadataaktakelahiran` varchar(50) NOT NULL,
+  `jumlah_masingmasingjeniskelompokaktakelahiran` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokaktakelahiran` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokaktakelahiran` varchar(70) NOT NULL,
+  `jumlah_dataaktakelahiran` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadaaktakelahiran` varchar(50) NOT NULL,
+  `totakeseluruhan_dataaktakelahiran` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datacalonpemilihuntukpemilihankhusus_siska`
+--
+
+CREATE TABLE `datacalonpemilihuntukpemilihankhusus_siska` (
+  `id` int(11) NOT NULL,
+  `jeniskelamin_penduduk` varchar(10) NOT NULL,
+  `pemilihan_dusunataudesa` varchar(75) NOT NULL,
+  `tanggal_pemilihan` varchar(50) NOT NULL,
+  `layanan_pencetakanpengunduhandanpencarianspesifik` point NOT NULL,
+  `nik_penduduk` int(16) NOT NULL,
+  `nama_penduduk` varchar(64) NOT NULL,
+  `nomor_kartukeluargapenduduk` int(16) NOT NULL,
+  `alamat_penduduk` varchar(200) NOT NULL,
+  `dusun_ataudesa` varchar(65) NOT NULL,
+  `rw` int(3) NOT NULL,
+  `rt` int(3) NOT NULL,
+  `pendidikandalam_kartukeluarga` varchar(75) NOT NULL,
+  `umuryangdiisikan_dalampemilihan` int(3) NOT NULL,
+  `pekerjaan_penduduk` varchar(100) NOT NULL,
+  `statuskawin_penduduk` varchar(30) NOT NULL,
+  `tampilandatapenduduk_yangsudahterdaftardalampemilihan` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datagolongandarahstatistikkhusus_siska`
+--
+
+CREATE TABLE `datagolongandarahstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatagolongandarah` varchar(65) NOT NULL,
+  `jenis_kelompokpadadatagolongandarah` varchar(20) NOT NULL,
+  `jumlah_masingmasingjeniskelompokgolongandarah` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokgolongandarah` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokgolongandarah` varchar(70) NOT NULL,
+  `jumlah_datagolongandarah` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadadatagolongandarah` varchar(50) NOT NULL,
+  `totakeseluruhan_datagolongandarah` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datahubungandalamkartukeluargastatistikkhusus_siska`
+--
+
+CREATE TABLE `datahubungandalamkartukeluargastatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatahubungandalamkk` varchar(65) NOT NULL,
+  `jenis_kelompokhubungandalamkk` varchar(60) NOT NULL,
+  `jumlah_masingmasingjeniskelompokhubungandalamkk` varchar(45) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamkelompokhubungandalamkk` varchar(30) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamkelompokhubungandalamkk` varchar(30) NOT NULL,
+  `jumlah_datahubungandalamkk` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamdatahubungandalamkk` varchar(50) NOT NULL,
+  `totalkeseluruhan_datahubungandalamkk` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datajenisasuransistatistikkhusus_siska`
+--
+
+CREATE TABLE `datajenisasuransistatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatajenisasuransi` varchar(65) NOT NULL,
+  `jenis_kelompokpadadatajenisasuransi` varchar(80) NOT NULL,
+  `jumlah_masingmasingjeniskelompokjenisasuransi` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokjenisasuransi` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokjenisasuransi` varchar(70) NOT NULL,
+  `jumlah_datajenisasuransi` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadadatajenisasuransi` varchar(50) NOT NULL,
+  `totakeseluruhan_datajenisasuransi` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datajeniskelaminstatistikkhusus_siska`
+--
+
+CREATE TABLE `datajeniskelaminstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatajeniskelamin` varchar(65) NOT NULL,
+  `jenis_kelompokjeniskelamin` varchar(55) NOT NULL,
+  `jumlah_masingmasingjeniskelompokjeniskelamin` varchar(45) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompokjeniskelamin` varchar(30) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompokjeniskelamin` varchar(30) NOT NULL,
+  `jumlah_datajeniskelamin` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamdatajeniskelamin` varchar(50) NOT NULL,
+  `totalkeseluruhan_datajeniskelamin` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -76,6 +229,24 @@ CREATE TABLE `datakeluargakhususkependudukan_siska` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `datakepemilikanktpstatistikkhusus_siska`
+--
+
+CREATE TABLE `datakepemilikanktpstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatakepemilikanktp` varchar(65) NOT NULL,
+  `jenis_kelompokpadadatakepemilikanktp` varchar(50) NOT NULL,
+  `jumlah_masingmasingjeniskelompokkepemilikanktp` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokkepemilikanktp` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokkepemilikanktp` varchar(70) NOT NULL,
+  `jumlah_datakepemilikanktp` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadadatakepemilikanktp` varchar(50) NOT NULL,
+  `totakeseluruhan_datakepemilikanktp` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `datakependudukan_siska`
 --
 
@@ -90,6 +261,72 @@ CREATE TABLE `datakependudukan_siska` (
   `laporan_kependudukanbulananataupertahun` longtext NOT NULL,
   `datapilahkependudukan_berdasarkanusiasertafaktorkerentanan` longtext NOT NULL,
   `datacalonpemilih_kepaladesauntukpemilihansecaraberkala` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datalayananpencetakandanpengunduhankhususdalamstatistik_siska`
+--
+
+CREATE TABLE `datalayananpencetakandanpengunduhankhususdalamstatistik_siska` (
+  `id` int(11) NOT NULL,
+  `laporan_ditandanganioleh` varchar(75) NOT NULL,
+  `nomor_laporan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapekerjaandalamstatistikkhusus_siska`
+--
+
+CREATE TABLE `datapekerjaandalamstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesadalamdatapekerjaanstatistik` varchar(65) NOT NULL,
+  `jeniskelompok_datapekerjaandalamstatistik` varchar(100) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpekerjaan` varchar(45) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompokpendidikandalamstatistik` varchar(10) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompokpekerjaandalamstatistik` varchar(10) NOT NULL,
+  `jumlah_datapekerjaan` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamdatapekerjaan` varchar(50) NOT NULL,
+  `totalkeseluruhan_datapekerjaandalamstatistik` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapendidikandalamkartukeluargastatistikkhusus_siska`
+--
+
+CREATE TABLE `datapendidikandalamkartukeluargastatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesadalampendidikankartukeluarga` varchar(65) NOT NULL,
+  `jeniskelompok_datapendidikandalamkk` varchar(100) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpendidikandalamkk` varchar(10) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompokpendidikandalamkk` varchar(10) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompokpendidikandalamkk` varchar(10) NOT NULL,
+  `jumlah_datapendidikandalamkk` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamdatapendidikandalamkk` varchar(50) NOT NULL,
+  `totalkeseluruhan_data` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapendidikanyangsedangditempuhdalamstatistikkhusus_siska`
+--
+
+CREATE TABLE `datapendidikanyangsedangditempuhdalamstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesadalampendidikanyangsedangditempuh` varchar(65) NOT NULL,
+  `jeniskelompok_datapendidikanyangsedangditempuh` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpendidikanyangsedangditempuh` varchar(30) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompokpendidikanyangsedangditempuh` varchar(45) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompokpendidikanyangsedangditempuh` varchar(45) NOT NULL,
+  `jumlah_datapendidikanyangsedangditempuh` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalampendidikanyangsedangditempuh` varchar(50) NOT NULL,
+  `totalkeseluruhan_datapendidikanyangsedangditempuh` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -122,6 +359,491 @@ CREATE TABLE `datapendudukkhususkependudukan_siska` (
   `statuskawin_penduduk` varchar(30) NOT NULL,
   `tanggallahir_penduduk` varchar(50) NOT NULL,
   `tanggalpendaftaran_pendudukkedalamdataserver` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapengelolaankelompokkhususpenduduk_siska`
+--
+
+CREATE TABLE `datapengelolaankelompokkhususpenduduk_siska` (
+  `id` int(11) NOT NULL,
+  `kategori_kelompokpengelolaanpenduduk` varchar(100) NOT NULL,
+  `layanan_aksipadapengelolaan` point NOT NULL,
+  `kode_kelompok` int(50) NOT NULL,
+  `nama_kelompok` varchar(75) NOT NULL,
+  `pernyataan_ketuakelompok` varchar(50) NOT NULL,
+  `kategori_kelompok` varchar(75) NOT NULL,
+  `jumlah_anggotakelompok` int(2) NOT NULL,
+  `tampilantotaldatapenduduk_yangtertampungdansudahterdaftar` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapengelompokkanrumahtanggakhusus_siska`
+--
+
+CREATE TABLE `datapengelompokkanrumahtanggakhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesa` varchar(75) NOT NULL,
+  `layanan_aksi` point NOT NULL,
+  `image_ataufotopenduduk` blob NOT NULL,
+  `nomor_rumahtangga` varchar(30) NOT NULL,
+  `nama_kepalakeluarga` varchar(64) NOT NULL,
+  `nik_penduduk` int(16) NOT NULL,
+  `jumlah_anggotakeluarga` int(2) NOT NULL,
+  `alamat_penduduk` varchar(200) NOT NULL,
+  `dusun_ataudesa` varchar(75) NOT NULL,
+  `rt` int(3) NOT NULL,
+  `rw` int(3) NOT NULL,
+  `tanggalterdaftarnya_pendudukpadadatarumahtangga` varchar(50) NOT NULL,
+  `tampilandatapenduduk_yangsudahterdaftar` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapenyakitmenahunstatistikkhusus_siska`
+--
+
+CREATE TABLE `datapenyakitmenahunstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatapenyakitmenahun` varchar(65) NOT NULL,
+  `jenis_kelompokpadadatapenyakitmenahun` varchar(45) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpenyakitmenahun` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokpenyakitmenahun` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokpenyakitmenahun` varchar(70) NOT NULL,
+  `jumlah_datapenyakitmenahun` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadadatapenyakitmenahun` varchar(50) NOT NULL,
+  `totakeseluruhan_datapenyakitmenahun` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datapenyandangcacatstatistikkhusus_siska`
+--
+
+CREATE TABLE `datapenyandangcacatstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatapenyandangcacat` varchar(65) NOT NULL,
+  `jenis_kelompokpadadatapenyandangcacat` varchar(50) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpenyandangcacat` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokpenyandangcacat` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokpenyandangcacat` varchar(70) NOT NULL,
+  `jumlah_datapenyandangcacat` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadapenyandangcacat` varchar(50) NOT NULL,
+  `totakeseluruhan_datapenyandangcacat` int(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datarentangumurdalamstatistikkhusus_siska`
+--
+
+CREATE TABLE `datarentangumurdalamstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `layananaksiumur_yangdiubahataudihapusdalamdata` point NOT NULL,
+  `rentang_umur` varchar(20) NOT NULL,
+  `tambah_rentangumur` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `hapus_rentangumur` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikkeluargakelasketahananpangankhusus_siska`
+--
+
+CREATE TABLE `datastatistikkeluargakelasketahananpangankhusus_siska` (
+  `id` int(11) NOT NULL,
+  `jeniskelompok_berdasarkankelasketahananpangan` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadakelasketahananpangan` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokketahananpangan` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokketahananpangan` varchar(70) NOT NULL,
+  `sifatdata_statistikkeluargakelasketahananpangan` varchar(55) NOT NULL,
+  `jumlah_datapadajeniskelompoklakilakidanperempuan` varchar(75) NOT NULL,
+  `jumlah_datayangbelumterisipadadatakeluargakelasketahananpangan` varchar(75) NOT NULL,
+  `total_keseluruhandatapadakelasketahananpangan` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikkeluargakelaslingkunganhidupkhusus_siska`
+--
+
+CREATE TABLE `datastatistikkeluargakelaslingkunganhidupkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `jeniskelompok_berdasarkankelaslingkunganhidup` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadakelaslingkunganhidup` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompoklingkunganhidup` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompoklingkunganhidup` varchar(70) NOT NULL,
+  `sifatdata_statistikkeluargakelaslingkunganhidup` varchar(90) NOT NULL,
+  `jumlah_datapadajeniskelompoklakilakidanperempuan` varchar(55) NOT NULL,
+  `jumlah_datayangbelumterisipadadatakeluargalingkunganhidup` varchar(75) NOT NULL,
+  `total_keseluruhandatapadakelaslingkunganhidup` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikkeluargakelaspenataanruangkhusus_siska`
+--
+
+CREATE TABLE `datastatistikkeluargakelaspenataanruangkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `jeniskelompok_berdasarkankelaspenataanruang` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadakelaspenataanruang` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokpenataanruang` varchar(50) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokpenataanruang` varchar(50) NOT NULL,
+  `sifatdata_statistikkeluargakelaspenataanruang` varchar(70) NOT NULL,
+  `jumlah_datapadajeniskelompoklakilakidanperempuan` varchar(55) NOT NULL,
+  `jumlah_datayangbelumterisipadadatakeluargapenataanruang` varchar(75) NOT NULL,
+  `total_keseluruhandatapadakelaspenataanruang` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikkeluargakelassosialkhusus_siska`
+--
+
+CREATE TABLE `datastatistikkeluargakelassosialkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `jeniskelompok_berdasarkankelassosial` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadakelassosial` varchar(50) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokkeluargasosial` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokkeluargasosial` varchar(70) NOT NULL,
+  `jumlah_keluargakelassosial` varchar(55) NOT NULL,
+  `jumlah_datayangbelumterisipadastatistikkeluargakelassosial` varchar(55) NOT NULL,
+  `total_keseluruhandatastatistikkeluargakelassosial` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistiklaporankelompokrentanmumurkhusus_siska`
+--
+
+CREATE TABLE `datastatistiklaporankelompokrentanmumurkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pengaturan_kembalikehalamanhome` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `proses_pencetakandokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `proses_pengunduhandokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `nama_desaataukelurahandalamlaporanrentanumur` varchar(50) NOT NULL,
+  `nama_kecamatandalamlaporanrentanumur` varchar(40) NOT NULL,
+  `laporan_bulan` int(2) NOT NULL,
+  `pilihan_dusunyangterdaftardalamlaporanrentanumur` point NOT NULL,
+  `data_dusunyangterdaftardalamtabel` varchar(60) NOT NULL,
+  `rt` int(3) NOT NULL,
+  `rw` int(3) NOT NULL,
+  `data_kartukeluargapadajeniskelamin` varchar(2) NOT NULL,
+  `kondisi_dankelompokumur` varchar(256) NOT NULL,
+  `data_umurdibawah1tahun` int(5) NOT NULL,
+  `data_umur1sampai5tahun` int(5) NOT NULL,
+  `data_umur6sampai12tahun` int(5) NOT NULL,
+  `data_umur13sampai15tahun` int(5) NOT NULL,
+  `data_umur16sampai18tahun` int(5) NOT NULL,
+  `data_umurdiatas60tahun` int(5) NOT NULL,
+  `keterangan_laporankelompokcacat` varchar(256) NOT NULL,
+  `data_cacatfisik` int(5) NOT NULL,
+  `data_cacatnetraataubuta` int(5) NOT NULL,
+  `data_cacatrunguatauwicara` int(5) NOT NULL,
+  `data_cacatmentalataujiwa` int(5) NOT NULL,
+  `data_cacatfisikdanmental` int(5) NOT NULL,
+  `data_cacatlainnya` int(5) NOT NULL,
+  `data_tidakcacat` int(5) NOT NULL,
+  `keterangan_sakitmenahunpadalakilakidanperempuan` varchar(2) NOT NULL,
+  `keterangan_datahamil` int(5) NOT NULL,
+  `total_keseluruhandatapadalaporankelompokrentanumur` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistiklaporankependudukanbulanankhusus_siska`
+--
+
+CREATE TABLE `datastatistiklaporankependudukanbulanankhusus_siska` (
+  `id` int(11) NOT NULL,
+  `tampilan_kembalikehome` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `proses_cetakdokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `proses_pengunduhandokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `namadesa_ataukelurahan` varchar(75) NOT NULL,
+  `namakecamatan_padalaporankependudukanbulanan` varchar(50) NOT NULL,
+  `tahun_padalaporankependudukanbulanan` int(4) NOT NULL,
+  `bulan_padalaporankependudukanbulanan` varchar(20) NOT NULL,
+  `perincian_laporankependudukanbulanan` varchar(250) NOT NULL,
+  `ketentuan_pendudukpadastatistikkependudukan` varchar(100) NOT NULL,
+  `jumlahwni_lakilaki` int(5) NOT NULL,
+  `jumlahwni_perempuan` int(5) NOT NULL,
+  `jumlahwna_lakilaki` int(5) NOT NULL,
+  `jumlahwna_perempuan` int(5) NOT NULL,
+  `pertambahan_jumlahlakilakpadawnasertawni` int(5) NOT NULL,
+  `pertambahan_jumlahperempuanpadawnasertawni` int(5) NOT NULL,
+  `pertambahan_seluruhjumlahwnadanwnilakilakisertaperempuan` int(5) NOT NULL,
+  `ketentuan_keluargadalamkk` varchar(75) NOT NULL,
+  `jumlah_lakilakipadakeluarga` int(5) NOT NULL,
+  `jumlah_perempuanpadakeluarga` int(5) NOT NULL,
+  `pertambahan_jumlahlakilakidanperempuanpadakeluarga` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpenerimabantuankeluargakhusus_siska`
+--
+
+CREATE TABLE `datastatistikpenerimabantuankeluargakhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatapenerimabantuankeluarga` varchar(75) NOT NULL,
+  `jeniskelompok_padastatistikpenerimabantuankeluarga` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokbantuankeluarga` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokbantuankeluarga` varchar(70) NOT NULL,
+  `penerima_datastatistikpenerimabantuankeluarga` varchar(50) NOT NULL,
+  `golongan_bukanpenerimabantuankeluarga` varchar(50) NOT NULL,
+  `totalkeseluruhandata_statistikpenerimabantuankeluarga` varchar(95) NOT NULL,
+  `penampilan_layananentridatayangsudahterdaftar` int(5) NOT NULL,
+  `pencarian_riwayatdaftarpenerimabantuankeluarga` varchar(45) NOT NULL,
+  `progam_penerimabantuankeluarga` varchar(75) NOT NULL,
+  `namapeserta_pendaftaranpenerimabantuankeluarga` varchar(64) NOT NULL,
+  `alamat_pesertapendaftaranpenerimabantuankeluarga` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpenerimabantuanpendudukkhusus_siska`
+--
+
+CREATE TABLE `datastatistikpenerimabantuanpendudukkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatapenerimabantuanpenduduk` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadapenerimabantuanpenduduk` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamkelompokpenerimabantuanpenduduk` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokpenerimabk` varchar(70) NOT NULL,
+  `penerima_jeniskelompokjumlahmasingmasinglakilakisertaperempuan` varchar(75) NOT NULL,
+  `golongan_bukanpenerimabantuanpenduduk` varchar(75) NOT NULL,
+  `total_keseluruhandatastatistikpenerimabantuanpenduduk` varchar(95) NOT NULL,
+  `penampilan_angkaentridatapenerimabantuankeluargayangterdaftar` int(7) NOT NULL,
+  `pencarian_datapenerimabantuanpenduduk` varchar(50) NOT NULL,
+  `program_penerimabantuanpenduduk` varchar(25) NOT NULL,
+  `namapeserta_penerimabantuanpenduduk` varchar(64) NOT NULL,
+  `alamat_pesertapenerimaanbantuanpenduduk` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpesertaprogrambedahrumahkhusus_siska`
+--
+
+CREATE TABLE `datastatistikpesertaprogrambedahrumahkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `sasarankeluarga_padastatistikpesertaprogrambedahrumah` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadapesertaprogrambedahrumah` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokprogrambedahrumah` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokprogrambedahrumah` varchar(70) NOT NULL,
+  `jumlah_pesertapadasasarankeluargadanlakilakiatauperempuan` varchar(80) NOT NULL,
+  `jumlah_bukanpesertaprogrambedahrumah` varchar(80) NOT NULL,
+  `total_keseluruhandatastatistikpesertaprogramkph` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpesertaprogramblsmkhusus_siska`
+--
+
+CREATE TABLE `datastatistikpesertaprogramblsmkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `sasarankeluarga_padastatistikpesertaprogramblsm` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadapesertaprogramblsm` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokpesertaprogramblsm` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokpesertaprogramblsm` varchar(70) NOT NULL,
+  `jumlah_pesertapadasasarankeluargadanlakilakiatauperempuan` varchar(55) NOT NULL,
+  `jumlah_bukanpesertaprogramblsm` varchar(55) NOT NULL,
+  `total_keseluruhandatastatistikpesertaprogramblsm` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpesertaprogrambpntkhusus_siska`
+--
+
+CREATE TABLE `datastatistikpesertaprogrambpntkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `sasarankeluarga_padastatistikpesertaprogrambpnt` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpadastatistikpesertaprogrambpnt` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokpesertaprogrambpnt` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokpesertaprogrambpnt` varchar(70) NOT NULL,
+  `data_jumlahpesertadalamsasaranpeserta` varchar(75) NOT NULL,
+  `golongandata_bukanpesertapadajumlahpesertaprogrambpnt` varchar(75) NOT NULL,
+  `total_keseluruhandatastatistikpesertaprogrambpnt` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpesertaprogrampbiapbnkhusus_siska`
+--
+
+CREATE TABLE `datastatistikpesertaprogrampbiapbnkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `sasaranpenduduk_pesertaprogrampbiapbn` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpesertaprogrampbiapbn` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokpesertaprogrampbiap` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokpesertapbiapbn` varchar(70) NOT NULL,
+  `jumlah_pesertapadasasarankeluargadanlakilakiatauperempuan` varchar(80) NOT NULL,
+  `jumlah_bukanpesertaprogrampbiapbn` varchar(80) NOT NULL,
+  `total_keseluruhandatastatistikpesertaprogrampbiapbn` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatistikpesertaprogrampkhkhusus_siska`
+--
+
+CREATE TABLE `datastatistikpesertaprogrampkhkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `sasarankeluarga_padastatistikpesertaprogrampkh` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpesertaprogrampkh` varchar(65) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamjeniskelompokpesertaprogrampkh` varchar(70) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamjeniskelompokpesertaprogramkph` varchar(70) NOT NULL,
+  `jumlah_pesertapadasasarankeluargamasingmasinglakilakiperempuan` varchar(80) NOT NULL,
+  `jumlah_bukanpesertaprogramkph` varchar(75) NOT NULL,
+  `total_keseluruhandatastatistikpesertaprogramkph` varchar(95) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatuscovidatauomicronstatistikkhusus_siska`
+--
+
+CREATE TABLE `datastatuscovidatauomicronstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatastatuscovidatauomicron` varchar(65) NOT NULL,
+  `jenis_kelompokpadadatastatuscovidatauomicron` varchar(20) NOT NULL,
+  `jumlah_masingmasingjeniskelompokstatuscovidatauomicron` varchar(60) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokstatuscovidatauomicron` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokstatuscovidatauomicron` varchar(70) NOT NULL,
+  `jumlah_datastatuscovidatauomicron` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadastatusscovidatauomicron` varchar(50) NOT NULL,
+  `totakeseluruhan_datastatuscovidatauomicron` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatuspendudukstatistikkhusus_siska`
+--
+
+CREATE TABLE `datastatuspendudukstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_desaataudusunpadadatastatuspenduduk` varchar(65) NOT NULL,
+  `jeniskelompok_statuspenduduk` varchar(50) NOT NULL,
+  `jumlah_masingmasingjeniskelompokstatuskependudukan` varchar(65) NOT NULL,
+  `jumlah_lakilakipadajeniskelompokstatuspenduduk` varchar(70) NOT NULL,
+  `jumlah_perempuanpadajeniskelompokstatuspenduduk` varchar(70) NOT NULL,
+  `jumlah_datastatuspenduduk` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisipadastatuspenduduk` varchar(50) NOT NULL,
+  `totakeseluruhan_datastatuspenduduk` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datastatusperkawinanstatistikkhusus_siska`
+--
+
+CREATE TABLE `datastatusperkawinanstatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesastatusperkawinan` varchar(65) NOT NULL,
+  `jeniskelompok_datastatusperkawinan` varchar(75) NOT NULL,
+  `jumlah_masingmasingjeniskelompokstatusperkawinan` varchar(50) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompokstatusperkawinan` varchar(30) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompokstatusperkawinan` varchar(30) NOT NULL,
+  `jumlah_datastatusperkawinanstatistik` varchar(60) NOT NULL,
+  `jumlah_datayangbelumterisidalamdatastatusperkawinan` varchar(60) NOT NULL,
+  `totalkeseluruhan_datastatusperkawinan` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datasuplemenkependudukankhusus_siska`
+--
+
+CREATE TABLE `datasuplemenkependudukankhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_sasaransuplemen` varchar(50) NOT NULL,
+  `layanan_aksisuplemen` point NOT NULL,
+  `nama_data` varchar(64) NOT NULL,
+  `jumlah_yangterdata` int(5) NOT NULL,
+  `sasaran_suplemen` varchar(100) NOT NULL,
+  `keterangan` varchar(200) NOT NULL,
+  `tampilantotaldata_pendudukyangsudahterdaftar` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `dataumurataurentangdalamstatistikkependudukan_siska`
+--
+
+CREATE TABLE `dataumurataurentangdalamstatistikkependudukan_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesa` varchar(50) NOT NULL,
+  `jeniskelompok_penduduk` varchar(50) NOT NULL,
+  `jumlah_masingmasingjeniskelompokpenduduk` varchar(10) NOT NULL,
+  `jumlah_lakilakimasingmasingkelompok` varchar(10) NOT NULL,
+  `jumlah_perempuanmasingmasingkelompok` varchar(10) NOT NULL,
+  `jumlah_data` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisi` varchar(50) NOT NULL,
+  `totalkeseluruhan_data` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `dataumurkategoridalamstatistikkependudukan_siska`
+--
+
+CREATE TABLE `dataumurkategoridalamstatistikkependudukan_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesa` varchar(65) NOT NULL,
+  `jenis_kelompokkategori` varchar(50) NOT NULL,
+  `jumlahpendudukyangterdata_dalamjeniskelompok` varchar(10) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamkelompokkategori` varchar(10) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamkelompokkategori` varchar(10) NOT NULL,
+  `jumlah_dataumurkategori` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamumurkategori` varchar(50) NOT NULL,
+  `totalkeseluruhan_dataumurkategori` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `datawarganegarastatistikkhusus_siska`
+--
+
+CREATE TABLE `datawarganegarastatistikkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `pemilihan_dusunataudesapadadatawarganegara` varchar(65) NOT NULL,
+  `jenis_kelompokwarganegara` varchar(25) NOT NULL,
+  `jumlah_masingmasingjeniskelompokwarganegara` varchar(45) NOT NULL,
+  `jumlah_lakilakimasingmasingdalamkelompokwarganegara` varchar(30) NOT NULL,
+  `jumlah_perempuanmasingmasingdalamkelompokwarganegara` varchar(30) NOT NULL,
+  `jumlah_datawarganegara` varchar(50) NOT NULL,
+  `jumlah_datayangbelumterisidalamdatawarganegara` varchar(50) NOT NULL,
+  `totalkeseluruhan_datawarganegara` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -289,37 +1011,6 @@ CREATE TABLE `platformpencetakansurat_siska` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profiladmin_siska`
---
-
-CREATE TABLE `profiladmin_siska` (
-  `id` int(11) NOT NULL,
-  `imageadmin_desa` blob NOT NULL,
-  `username_admin` varchar(50) NOT NULL,
-  `email_admin` varchar(65) NOT NULL,
-  `nomortelepon_adminsiska` int(14) NOT NULL,
-  `settingakun_admindesa` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `profilakunaplikasi_siska`
---
-
-CREATE TABLE `profilakunaplikasi_siska` (
-  `id` int(11) NOT NULL,
-  `image_userprofil` blob NOT NULL,
-  `username_profilsiska` varchar(50) NOT NULL,
-  `email_profil` varchar(50) NOT NULL,
-  `nomortelepon_user` int(50) NOT NULL,
-  `setting_akundata` text NOT NULL,
-  `submit_tautanakun` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `profilakunyangsudahtertaut_siska`
 --
 
@@ -332,6 +1023,25 @@ CREATE TABLE `profilakunyangsudahtertaut_siska` (
   `tampilandata_desasiska` varchar(256) NOT NULL,
   `biodata_kependudukan` text NOT NULL,
   `setting_akundone` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `statistikkependudukankhusus_siska`
+--
+
+CREATE TABLE `statistikkependudukankhusus_siska` (
+  `id` int(11) NOT NULL,
+  `layanan_pencetakan` mediumtext NOT NULL,
+  `layanan_pengunduhan` mediumtext NOT NULL,
+  `grafik_datapenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `pie_datapenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `rentangumur_penduduk` longtext NOT NULL,
+  `proses_pembersihanfilter` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `statistik_penduduk` longtext NOT NULL,
+  `statistik_keluarga` mediumtext NOT NULL,
+  `statistik_programbantuan` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -557,32 +1267,6 @@ CREATE TABLE `transformasikerjadesadigitaldantautanakunkedesa_siska` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `nama_lengkap` varchar(64) NOT NULL,
-  `kata_sandi` varchar(128) NOT NULL,
-  `alamat_email` varchar(64) NOT NULL,
-  `no_telepon` varchar(15) NOT NULL,
-  `level` enum('warga','admin','','') NOT NULL DEFAULT 'warga',
-  `tgl_daftar` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `user`
---
-
-INSERT INTO `user` (`id`, `nama_lengkap`, `kata_sandi`, `alamat_email`, `no_telepon`, `level`, `tgl_daftar`) VALUES
-(1, 'Muhammad Raihan Khalid', '$2y$10$QYHYfIEVDNtv21agtQ9XOOC0Nht6iHqem/pody82NBcMkdHxnHR.K', 'raihnkhalid@gmail.com', '081397246510', 'warga', NULL),
-(2, 'Khalid', '$2y$10$7p3tv8oJdho46XXAg4tu6uC6s22sG/SPD4BH9T8TPgIqELc3whF0i', 'raihn@gmail.com', '391298383', 'warga', NULL),
-(3, 'Khalid111', '$2y$10$aL5BZQzHt/197C3tgReqiOueyXwUnBVWonakNpJzL.JSys75wSQy.', 'raihn@gmail.comm', '3912983838', 'warga', '2021-12-23'),
-(4, 'Khalid111', '$2y$10$3KN1gv.steBG7xnCiD6gzu5vN2uQbZSFNL84zL/wX1dbPnF9Kgkn6', 'raihn@gmail.commm', '39129838381', 'warga', '2021-12-23');
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `userakun_siska`
 --
 
@@ -592,6 +1276,9 @@ CREATE TABLE `userakun_siska` (
   `alamat_email` varchar(64) NOT NULL,
   `kata_sandi` varchar(128) NOT NULL,
   `no_telepon` varchar(14) NOT NULL,
+  `desa_user` varchar(128) NOT NULL,
+  `gambar_profil` varchar(128) NOT NULL DEFAULT 'default_profil.png',
+  `level_user` enum('administrator','user') NOT NULL DEFAULT 'user',
   `tgl_daftar` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -599,9 +1286,9 @@ CREATE TABLE `userakun_siska` (
 -- Dumping data untuk tabel `userakun_siska`
 --
 
-INSERT INTO `userakun_siska` (`id_user`, `nama_lengkap`, `alamat_email`, `kata_sandi`, `no_telepon`, `tgl_daftar`) VALUES
-(1, 'Raihan Khalid', 'raihnkhalid@gmail.com', '@Raihan156', '085155348627', '0000-00-00'),
-(6, 'Raihan Khalid', 'raihn.khalid@gmail.com', '@Raihan156', '081236093254', '0000-00-00');
+INSERT INTO `userakun_siska` (`id_user`, `nama_lengkap`, `alamat_email`, `kata_sandi`, `no_telepon`, `desa_user`, `gambar_profil`, `level_user`, `tgl_daftar`) VALUES
+(1, 'Muhammad Raihan Khalid', 'raihnkhalid@gmail.com', '$2y$10$dg1qnIa7.6OJUwZPIKbr5uJQ5HloR/ij0L.hwwGkOULR7KvTuSYTO', '085155348627', 'Purwanegara', 'default_profil.png', 'administrator', '2022-01-09'),
+(2, 'Example Gratia', 'exampleg@yahoo.com', '$2y$10$nu5EcR1e80f3ZyKW9YwrY.Ggmy8XByxWGRS1T6GdVF.EV.h/41QIS', '08969601231', 'Kembaran', 'default_profil.png', 'user', '2022-01-10');
 
 --
 -- Indexes for dumped tables
@@ -613,7 +1300,57 @@ INSERT INTO `userakun_siska` (`id_user`, `nama_lengkap`, `alamat_email`, `kata_s
 ALTER TABLE `aktakelahiran_siska`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `STBLD` (`stbld`),
-  ADD UNIQUE KEY `NIP Kepala Dinas Kependudukan dan Pencatatan Sipil` (`nipkepaladinaskependudukan_danpencatatansipil`);
+  ADD UNIQUE KEY `NIP Kepala Dinas Kependudukan dan Pencatatan Sipil` (`nipkepaladinaskependudukan_danpencatatansipil`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indeks untuk tabel `dataagamastatistikkependudukakhusus_siska`
+--
+ALTER TABLE `dataagamastatistikkependudukakhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `dataakseptorkbstatistikkhusus_siska`
+--
+ALTER TABLE `dataakseptorkbstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `dataaktakelahiranstatistikkhusus_siska`
+--
+ALTER TABLE `dataaktakelahiranstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datacalonpemilihuntukpemilihankhusus_siska`
+--
+ALTER TABLE `datacalonpemilihuntukpemilihankhusus_siska`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`nomor_kartukeluargapenduduk`);
+
+--
+-- Indeks untuk tabel `datagolongandarahstatistikkhusus_siska`
+--
+ALTER TABLE `datagolongandarahstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datahubungandalamkartukeluargastatistikkhusus_siska`
+--
+ALTER TABLE `datahubungandalamkartukeluargastatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datajenisasuransistatistikkhusus_siska`
+--
+ALTER TABLE `datajenisasuransistatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datajeniskelaminstatistikkhusus_siska`
+--
+ALTER TABLE `datajeniskelaminstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `datakeluargakhususkependudukan_siska`
@@ -623,9 +1360,39 @@ ALTER TABLE `datakeluargakhususkependudukan_siska`
   ADD UNIQUE KEY `UNIQUE` (`nik_penduduk`);
 
 --
+-- Indeks untuk tabel `datakepemilikanktpstatistikkhusus_siska`
+--
+ALTER TABLE `datakepemilikanktpstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `datakependudukan_siska`
 --
 ALTER TABLE `datakependudukan_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datalayananpencetakandanpengunduhankhususdalamstatistik_siska`
+--
+ALTER TABLE `datalayananpencetakandanpengunduhankhususdalamstatistik_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datapekerjaandalamstatistikkhusus_siska`
+--
+ALTER TABLE `datapekerjaandalamstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datapendidikandalamkartukeluargastatistikkhusus_siska`
+--
+ALTER TABLE `datapendidikandalamkartukeluargastatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datapendidikanyangsedangditempuhdalamstatistikkhusus_siska`
+--
+ALTER TABLE `datapendidikanyangsedangditempuhdalamstatistikkhusus_siska`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -634,6 +1401,159 @@ ALTER TABLE `datakependudukan_siska`
 ALTER TABLE `datapendudukkhususkependudukan_siska`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `UNIQUE` (`nomorurut_rumahtangga`);
+
+--
+-- Indeks untuk tabel `datapengelolaankelompokkhususpenduduk_siska`
+--
+ALTER TABLE `datapengelolaankelompokkhususpenduduk_siska`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`kategori_kelompok`);
+
+--
+-- Indeks untuk tabel `datapengelompokkanrumahtanggakhusus_siska`
+--
+ALTER TABLE `datapengelompokkanrumahtanggakhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datapenyakitmenahunstatistikkhusus_siska`
+--
+ALTER TABLE `datapenyakitmenahunstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datapenyandangcacatstatistikkhusus_siska`
+--
+ALTER TABLE `datapenyandangcacatstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datarentangumurdalamstatistikkhusus_siska`
+--
+ALTER TABLE `datarentangumurdalamstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`rentang_umur`);
+
+--
+-- Indeks untuk tabel `datastatistikkeluargakelasketahananpangankhusus_siska`
+--
+ALTER TABLE `datastatistikkeluargakelasketahananpangankhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikkeluargakelaslingkunganhidupkhusus_siska`
+--
+ALTER TABLE `datastatistikkeluargakelaslingkunganhidupkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikkeluargakelaspenataanruangkhusus_siska`
+--
+ALTER TABLE `datastatistikkeluargakelaspenataanruangkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikkeluargakelassosialkhusus_siska`
+--
+ALTER TABLE `datastatistikkeluargakelassosialkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistiklaporankelompokrentanmumurkhusus_siska`
+--
+ALTER TABLE `datastatistiklaporankelompokrentanmumurkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistiklaporankependudukanbulanankhusus_siska`
+--
+ALTER TABLE `datastatistiklaporankependudukanbulanankhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpenerimabantuankeluargakhusus_siska`
+--
+ALTER TABLE `datastatistikpenerimabantuankeluargakhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpenerimabantuanpendudukkhusus_siska`
+--
+ALTER TABLE `datastatistikpenerimabantuanpendudukkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpesertaprogrambedahrumahkhusus_siska`
+--
+ALTER TABLE `datastatistikpesertaprogrambedahrumahkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpesertaprogramblsmkhusus_siska`
+--
+ALTER TABLE `datastatistikpesertaprogramblsmkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpesertaprogrambpntkhusus_siska`
+--
+ALTER TABLE `datastatistikpesertaprogrambpntkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpesertaprogrampbiapbnkhusus_siska`
+--
+ALTER TABLE `datastatistikpesertaprogrampbiapbnkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatistikpesertaprogrampkhkhusus_siska`
+--
+ALTER TABLE `datastatistikpesertaprogrampkhkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatuscovidatauomicronstatistikkhusus_siska`
+--
+ALTER TABLE `datastatuscovidatauomicronstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatuspendudukstatistikkhusus_siska`
+--
+ALTER TABLE `datastatuspendudukstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datastatusperkawinanstatistikkhusus_siska`
+--
+ALTER TABLE `datastatusperkawinanstatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datasuplemenkependudukankhusus_siska`
+--
+ALTER TABLE `datasuplemenkependudukankhusus_siska`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`pemilihan_sasaransuplemen`);
+
+--
+-- Indeks untuk tabel `dataumurataurentangdalamstatistikkependudukan_siska`
+--
+ALTER TABLE `dataumurataurentangdalamstatistikkependudukan_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `dataumurkategoridalamstatistikkependudukan_siska`
+--
+ALTER TABLE `dataumurkategoridalamstatistikkependudukan_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `datawarganegarastatistikkhusus_siska`
+--
+ALTER TABLE `datawarganegarastatistikkhusus_siska`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `domisilipenduduk_siska`
@@ -687,21 +1607,15 @@ ALTER TABLE `platformpencetakansurat_siska`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `profiladmin_siska`
---
-ALTER TABLE `profiladmin_siska`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `profilakunaplikasi_siska`
---
-ALTER TABLE `profilakunaplikasi_siska`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indeks untuk tabel `profilakunyangsudahtertaut_siska`
 --
 ALTER TABLE `profilakunyangsudahtertaut_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `statistikkependudukankhusus_siska`
+--
+ALTER TABLE `statistikkependudukankhusus_siska`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -763,12 +1677,6 @@ ALTER TABLE `transformasikerjadesadigitaldantautanakunkedesa_siska`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indeks untuk tabel `userakun_siska`
 --
 ALTER TABLE `userakun_siska`
@@ -781,16 +1689,20 @@ ALTER TABLE `userakun_siska`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT untuk tabel `userakun_siska`
 --
 ALTER TABLE `userakun_siska`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `aktakelahiran_siska`
+--
+ALTER TABLE `aktakelahiran_siska`
+  ADD CONSTRAINT `aktakelahiran_siska_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userakun_siska` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
