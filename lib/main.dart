@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:siskaproject/test.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,288 +7,80 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: 'Material App',
       home: Scaffold(
+        backgroundColor: Color.fromRGBO(51, 157, 255, 1),
         body: ListView(
+          physics: NeverScrollableScrollPhysics(),
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-              height: 178,
+              margin: EdgeInsets.symmetric(horizontal: 0, vertical: 300),
+              height: 500,
               decoration: BoxDecoration(
-                  color: Color.fromRGBO(51, 157, 255, 1),
-                  borderRadius: BorderRadius.circular(10)),
-              child: Stack(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Image.asset("assets/images/logo3.png",
-                              width: 200, height: 200, fit: BoxFit.cover),
+                  color: Colors.white, borderRadius: BorderRadius.circular(40)),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 40),
+                child: Column(
+                  children: [
+                    Text(
+                      "Masuk",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color.fromRGBO(51, 157, 255, 1),
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(top: 60, right: 50, left: 50),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25))),
+                          hintText: 'adminsiska@gmail.com',
+                          labelText: 'Username/email',
+                          prefixIcon: Icon(Icons.person),
                         ),
+                        keyboardType: TextInputType.emailAddress,
+                        showCursor: true,
                       ),
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(top: 40, right: 50, left: 50),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25))),
+                          hintText: '*********',
+                          labelText: 'Password',
+                          prefixIcon: Icon(Icons.person),
+                        ),
+                        keyboardType: TextInputType.emailAddress,
+                        showCursor: true,
+                        obscureText: true,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 30),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15))),
+                          onPressed: () {
+                            print("Login Berhasil");
+                          },
                           child: Text(
-                            "SELAMAT DATANG DI APLIKASI SISKA",
-                            style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                            "Masuk",
+                            style: TextStyle(fontSize: 18),
+                          )),
+                    )
+                  ],
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  //1
-                   ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.account_box_outlined,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                  //2
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.assignment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                  //3
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.assessment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                  //4
-                   ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.contact_phone_outlined,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "Kontak ",
-                          style: TextStyle(fontSize: 7,color:Colors.blue),
-                        ),
-                        Text(
-                          "Penting",
-                          style: TextStyle(fontSize: 7,color:Colors.blue),
-                        ),
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  //5
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.card_travel,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                  //6
-                   ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.assignment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                  //7
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.desktop_windows_rounded,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                  //8
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.assignment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
-                        Text(
-                          "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
-                        )
-                      ],
-                    ),
-                    onPressed: () {
-                      print('check');
-                      
-                    },
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
-                child: Text(
-                  "Berita hari ini",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                )),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -330,4 +121,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// TestEdit
