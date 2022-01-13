@@ -182,6 +182,37 @@ function insert_akta_kelahiran()
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $jsondata = json_decode(is_user_login());
         if ($jsondata->status == 1) {
+            $noAktaKelahiran = $_POST['noAktek'];
+            $namaLengkap = $_POST['fullname'];
+            $tempatLahir = $_POST['tempatlahir'];
+            $tanggalLahir = $_POST['tanggal'];
+            $bulanLahir = $_POST['bulan'];
+            $tahunLahir = $_POST['tahun'];
+            $anakno = $_POST['anakNo'];
+            $tempatdibuat = $_POST['tempatdibuat'];
+            $tanggalKeluar = $_POST['tanggalKeluar'];
+            $bulanKeluar = $_POST['bulanKeluar'];
+            $tahunKeluar = $_POST['tahunKeluar'];
+            $ketKepDinas = $_POST['ketkepdinas'];
+            $namaKepDinas = $_POST['namakepdinas'];
+            $nipKepDinas = $_POST['nipKepDinas'];
+
+            $params = array(
+                ":noakta" => $noAktaKelahiran,
+                ":fullname" => $namaLengkap,
+                ":tempatlahir" => $tempatLahir,
+                ":tanggallahir" => $tanggalLahir,
+                ":bulanlahir" => $bulanLahir,
+                ":tahunlahir" => $tahunLahir,
+                ":anakno" => $anakno,
+                ":tempatdibuat" => $tempatdibuat,
+                ":tanggalkeluar" => $tanggalKeluar,
+                ":bulankeluar" => $bulanKeluar,
+                ":tahunkeluar" => $tahunKeluar,
+                ":ketkepdinas" => $ketKepDinas,
+                ":namakepdinas" => $namaKepDinas,
+                ":nipkepdinas" => $nipKepDinas
+            );
         } else {
             $response = array(
                 'status' => 0,
