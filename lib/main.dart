@@ -53,29 +53,11 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //1
-<<<<<<< HEAD
                    ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.account_box_outlined,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("Profil",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -98,29 +80,11 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                   //2
-<<<<<<< HEAD
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.assignment_outlined,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -143,29 +107,11 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                   //3
-<<<<<<< HEAD
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.assessment_outlined,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -188,29 +134,11 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                   //4
-<<<<<<< HEAD
                    ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.contact_phone_outlined,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -245,29 +173,11 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //5
-<<<<<<< HEAD
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.card_travel,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -290,29 +200,11 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                   //6
-<<<<<<< HEAD
                    ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.view_compact_rounded,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -335,29 +227,11 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                   //7
-<<<<<<< HEAD
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.desktop_windows_rounded,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
@@ -380,29 +254,11 @@ class MyApp extends StatelessWidget {
                     },
                   ),
                   //8
-<<<<<<< HEAD
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(7.7),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-=======
-                  Container(
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.assignment_outlined,
-                                size: 33,
-                                color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
->>>>>>> firman/master
                       ),
                       shadowColor: Colors.grey,
                       primary: Colors.white
