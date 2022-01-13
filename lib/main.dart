@@ -53,120 +53,116 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //1
-                  Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.account_box_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("Profil", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.account_box_outlined,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                   //2
-                 Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.assignment_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.assignment_outlined,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                   //3
-                 Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.assessment_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.assessment_outlined,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                   //4
-                  Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.contact_phone_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.contact_phone_outlined,
+                          size: 35,color:Colors.blue
+                        ),
+                        Text(
+                          "Kontak ",
+                          style: TextStyle(fontSize: 7,color:Colors.blue),
+                        ),
+                        Text(
+                          "Penting",
+                          style: TextStyle(fontSize: 7,color:Colors.blue),
                         ),
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                 ],
               ),
@@ -177,120 +173,112 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //5
-                  Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.card_travel, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.card_travel,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                   //6
-                  Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.view_compact_rounded , size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.assignment_outlined,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                   //7
-                  Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.desktop_windows_rounded, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.desktop_windows_rounded,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                   //8
-                  Container(
-                     
-                    child:Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-                        child: Column(
-                          children: [
-                            Icon(Icons.assignment_outlined, size: 33,color: Color.fromRGBO(51, 157, 255, 1)),
-                            Text("text", style: TextStyle(color: Color.fromRGBO(51, 157, 255, 1))),
-                          ],
-                        ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.all(7.7),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
+                      shadowColor: Colors.grey,
+                      primary: Colors.white
                     ),
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.assignment_outlined,
+                          size: 35,color:Colors.blue
                         ),
+                        Text(
+                          "XX",
+                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                        )
                       ],
                     ),
+                    onPressed: () {
+                      print('check');
+                      
+                    },
                   ),
                 ],
               ),
