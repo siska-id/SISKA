@@ -42,13 +42,36 @@ function is_user_login()
         $fetchData = $query->fetch(PDO::FETCH_OBJ);
         $response = array(
             'status' => 1,
-            'message' => $session
+            'message' => "User telah login!"
         );
     } else {
         $response = [
             "status" => 0,
             "message" => "User belum login, silahkan login terlebih dahulu!"
         ];
+    }
+    $result = json_encode($response);
+    echo $result;
+    return $result;
+}
+
+function logout_user()
+{
+    global $db;
+    $session = $_SESSION['login'];
+    if (!isset($session)) {
+        $response = array(
+            'status' => 0,
+            'message' => "User belum login, silahkan login terlebih dahulu!"
+        );
+    } elseif (isset($session)) {
+        $dest = session_destroy();
+        if ($dest) {
+            $response = array(
+                'status' => 1,
+                'message' => 'Berhasil Logout!'
+            );
+        }
     }
     echo json_encode($response);
 }
@@ -156,11 +179,14 @@ function register_user()
 #Function untuk menambahkan/mendaftar akta kelahiran
 function insert_akta_kelahiran()
 {
-    if ($_SERVER['REQUEST_METHOD'] == "POST") { 
-        $data = file_get_contents("http://rkhalid.net/restapi.php?function=is_user_login");
-        $json = json_decode($data);
-        if ($json->status == 0) {
-            echo "Lanjut Isi Akta";
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $jsondata = json_decode(is_user_login());
+        if ($jsondata->status == 1) {
+        } else {
+            $response = array(
+                'status' => 0,
+                'message' => "User belum login, silahkan login terlebih dahulu!"
+            );
         }
     } else {
         $response = array(
