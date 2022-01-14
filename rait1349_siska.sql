@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 13 Jan 2022 pada 21.07
+-- Waktu pembuatan: 14 Jan 2022 pada 19.21
 -- Versi server: 10.2.41-MariaDB-cll-lve
 -- Versi PHP: 7.4.27
 
@@ -118,6 +118,36 @@ CREATE TABLE `administrasibukuekspedisikhusus_siska` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `administrasibukuindukpendudukkhusus_siska`
+--
+
+CREATE TABLE `administrasibukuindukpendudukkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `inputpencetakan_bukuindukpenduduk` mediumtext NOT NULL,
+  `inputpengunduhan_bukuindukpenduduk` mediumtext NOT NULL,
+  `refresh_halamandatabaseindukpenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `pemilihan_tahun` int(4) NOT NULL,
+  `pemilihan_bulan` varchar(20) NOT NULL,
+  `nomorurut_userataupenduduk` int(5) NOT NULL,
+  `namalengkap_ataupanggilanuserataupunpenduduk` varchar(64) NOT NULL,
+  `jeniskelamin_userataupenduduk` varchar(15) NOT NULL,
+  `statusperkawinan_userataupenduduk` varchar(50) NOT NULL,
+  `tempatdantanggallahir_userataupenduduk` varchar(85) NOT NULL,
+  `agama_userataupenduduk` varchar(15) NOT NULL,
+  `pendidikanterakhir_userataupenduduk` varchar(65) NOT NULL,
+  `pekerjaan_userataupenduduk` varchar(80) NOT NULL,
+  `kewarganegaraan_userataupenduduk` varchar(3) NOT NULL,
+  `alamatlengkap_userataupenduduk` varchar(150) NOT NULL,
+  `kedudukandalam_keluarga` varchar(30) NOT NULL,
+  `nik_userataupenduduk` int(16) NOT NULL,
+  `nomorkartukeluarga_userataupenduduk` int(16) NOT NULL,
+  `keterangan_lebihlanjut` varchar(150) NOT NULL,
+  `tampilandata_atauentriyangsudahmasukdanmendaftardalambukuip` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `administrasibukuinventarisdankekayaandesakhusus_siska`
 --
 
@@ -169,6 +199,41 @@ CREATE TABLE `administrasibukukeputusankepaladesakhusus_siska` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `administrasibukuktpdankkkhusus_siska`
+--
+
+CREATE TABLE `administrasibukuktpdankkkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `inputpencetakan_bukuktpdankk` mediumtext NOT NULL,
+  `inputpengunduhan_bukuktpdankk` mediumtext NOT NULL,
+  `refresh_ataupembersihanfilterdalamdatabase` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `pemilihan_tahun` int(4) NOT NULL,
+  `pemilihan_bulan` varchar(25) NOT NULL,
+  `nomor_urutbukuktpdankk` int(5) NOT NULL,
+  `nomor_kartukeluarga` int(16) NOT NULL,
+  `nama_lengkapuserataupenduduk` varchar(64) NOT NULL,
+  `nik_userataupenduduk` int(16) NOT NULL,
+  `jenis_kelaminuserataupenduduk` varchar(10) NOT NULL,
+  `tempatdantanggallahir_userataupenduduk` varchar(30) NOT NULL,
+  `golongandarah_userataupenduduk` varchar(20) NOT NULL,
+  `agama_userataupenduduk` varchar(25) NOT NULL,
+  `pendidikan_userataupenduduk` varchar(75) NOT NULL,
+  `pekerjaan_userataupenduduk` varchar(90) NOT NULL,
+  `alamat_userataupenduduk` varchar(100) NOT NULL,
+  `statusperkawinan_userataupenduduk` varchar(50) NOT NULL,
+  `tempatdantanggallahirdikeluarkan_userataupenduduk` varchar(65) NOT NULL,
+  `status_hubungankeluargauserataupenduduk` varchar(30) NOT NULL,
+  `kewarganegaraan_userataupenduduk` varchar(3) NOT NULL,
+  `namaayah_userataupenduduk` varchar(64) NOT NULL,
+  `namaibu_userataupenduduk` varchar(64) NOT NULL,
+  `tanggalmulai_tinggaldidesa` varchar(30) NOT NULL,
+  `keterangan` varchar(50) NOT NULL,
+  `tampilantotaldata_atauentriyangsudahmasukdanterdaftar` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `administrasibukulembarandanberitadesakhusus_siska`
 --
 
@@ -186,6 +251,66 @@ CREATE TABLE `administrasibukulembarandanberitadesakhusus_siska` (
   `keaktfifanlaporan_denganpilihanyaatautidak` varchar(5) NOT NULL,
   `pemuatan_waktudata` varchar(65) NOT NULL,
   `tampilantotaldata_yangterentriatausudahterdaftardalamdatabase` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `administrasibukumutasipendudukdesakhusus_siska`
+--
+
+CREATE TABLE `administrasibukumutasipendudukdesakhusus_siska` (
+  `id` int(11) NOT NULL,
+  `inputpencetakan_bukumutasipendudukdesa` mediumtext NOT NULL,
+  `inputpengunduhan_bukumutasipendudukdesa` mediumtext NOT NULL,
+  `refresh_halamandatabasemutasipenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `pemilihan_tahun` int(4) NOT NULL,
+  `pemilihan_bulan` varchar(25) NOT NULL,
+  `nomor_urutpenduduk` int(5) NOT NULL,
+  `namalengkap_ataupanggilanuserataupenduduk` varchar(64) NOT NULL,
+  `tempatdan_tanggallahiruserataupenduduk` varchar(50) NOT NULL,
+  `jeniskelamin_userataupenduduk` varchar(10) NOT NULL,
+  `kewarganegaraan_userataupenduduk` varchar(3) NOT NULL,
+  `penambahan_datangdaridaerahataukotaataupunnegara` varchar(50) NOT NULL,
+  `tanggal_datang` varchar(30) NOT NULL,
+  `pengurangan_pindahkedaerah` varchar(50) NOT NULL,
+  `tanggal_pindah` varchar(30) NOT NULL,
+  `ketentuanpenguranganpenduduk_karenameninggalsertaalasannya` varchar(50) NOT NULL,
+  `tanggal_meninggal` varchar(30) NOT NULL,
+  `keterangan_danlainlain` varchar(100) NOT NULL,
+  `tampilandata_atauentriyangsudahmasukdanterdaftardalamdatabase` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `administrasibukupenduduksementarakhusus_siska`
+--
+
+CREATE TABLE `administrasibukupenduduksementarakhusus_siska` (
+  `id` int(11) NOT NULL,
+  `inputpencetakan_bukupenduduksementara` mediumtext NOT NULL,
+  `inputpengunduhan_bukupenduduksementara` mediumtext NOT NULL,
+  `refresh_ataupembersihanfilterdalamdatabase` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `pemilihan_tahun` int(4) NOT NULL,
+  `pemilihan_bulan` int(25) NOT NULL,
+  `nomor_urutbukups` int(5) NOT NULL,
+  `namalengkap_userataupenduduk` varchar(64) NOT NULL,
+  `jeniskelaminlakilaki_userataupenduduksebesar` int(5) NOT NULL,
+  `jeniskelaminperempuan_userataupenduduk` int(5) NOT NULL,
+  `nomoridentitas_atautandapengenalpenduduk` varchar(50) NOT NULL,
+  `tempatdantanggallahir_userataupenduduk` varchar(30) NOT NULL,
+  `umur_userataupenduduk` int(5) NOT NULL,
+  `pekerjaan_userataupenduduk` varchar(80) NOT NULL,
+  `kewarganegaraankebangsaan_userataupenduduk` varchar(50) NOT NULL,
+  `kewarganegaraanketurunan_userataupenduduk` varchar(50) NOT NULL,
+  `kedatanganataudatangdari_userataupenduduk` varchar(40) NOT NULL,
+  `maksud_dantujuankedatangan` varchar(100) NOT NULL,
+  `nama_danalamatyangditandangani` varchar(120) NOT NULL,
+  `datang_tanggal` varchar(30) NOT NULL,
+  `pergi_tanggal` varchar(30) NOT NULL,
+  `keterangan_danlainlain` varchar(100) NOT NULL,
+  `tampilantotaldata_atauentriyangmasukdanterdaftardalamdatabase` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -211,6 +336,48 @@ CREATE TABLE `administrasibukuperaturandesakhusus_siska` (
   `statusaktif_atautidaknyaperdes` varchar(40) NOT NULL,
   `waktupemuatan_dataperdes` varchar(50) NOT NULL,
   `tampilantotaldata_yangsudahterdaftardalamperdesini` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `administrasibukurekapitulasijumlahpendudukkhusus_siska`
+--
+
+CREATE TABLE `administrasibukurekapitulasijumlahpendudukkhusus_siska` (
+  `id` int(11) NOT NULL,
+  `inputpencetakan_bukurekapitulasijumlahpenduduk` mediumtext NOT NULL,
+  `inputpengunduhan_bukurekapitulasijumlahpenduduk` mediumtext NOT NULL,
+  `refresh_halamandatabaserekapitulasijumlahpenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `pemilihan_tahun` int(4) NOT NULL,
+  `pemilihan_bulan` varchar(25) NOT NULL,
+  `nomor_urut` int(5) NOT NULL,
+  `nama_desa` varchar(75) NOT NULL,
+  `jumlah_dusun` int(5) NOT NULL,
+  `jumlah_kartukeluarga` int(5) NOT NULL,
+  `jumlah_wajibktp` int(5) NOT NULL,
+  `jumlahpendudukawalbulan_lakilaki` int(5) NOT NULL,
+  `jumlahpendudukawalbulan_perempuan` int(5) NOT NULL,
+  `jumlahpendudukawalbulan_lakilakidanperempuan` int(5) NOT NULL,
+  `keadaanpenduduk_padabulan` point NOT NULL,
+  `faktorlahir_lakilaki` int(5) NOT NULL,
+  `faktorlahir_perempuan` int(5) NOT NULL,
+  `faktorlahir_lakilakidanperempuan` int(5) NOT NULL,
+  `faktormati_lakilaki` int(5) NOT NULL,
+  `faktormati_perempuan` int(5) NOT NULL,
+  `faktormati_lakilakidanperempuan` int(5) NOT NULL,
+  `faktordatang_lakilaki` int(5) NOT NULL,
+  `faktordatang_perempuan` int(5) NOT NULL,
+  `faktordatang_lakilakidanperempuan` int(5) NOT NULL,
+  `faktorpindah_lakilaki` int(5) NOT NULL,
+  `faktorpindah_perempuan` int(5) NOT NULL,
+  `faktorpindah_lakilakidanperempuan` int(5) NOT NULL,
+  `jumlahpendudukakhirbulan_lakilaki` int(5) NOT NULL,
+  `jumlahpendudukakhirbulan_perempuan` int(5) NOT NULL,
+  `jumlahpendudukakhirbulan_lakilakidanperempuan` int(5) NOT NULL,
+  `luas_wilayah` varchar(15) NOT NULL,
+  `keterangan_danlainlain` varchar(100) NOT NULL,
+  `tampilandata_atauentriyangmasukdanterdaftar` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1407,6 +1574,28 @@ CREATE TABLE `formatpencetakan_bukuekspedisi` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `formatpencetakan_bukuindukpenduduk`
+--
+
+CREATE TABLE `formatpencetakan_bukuindukpenduduk` (
+  `id` int(11) NOT NULL,
+  `tanggalcetak_bip` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpencetakan_bukuktpdankk`
+--
+
+CREATE TABLE `formatpencetakan_bukuktpdankk` (
+  `id` int(11) NOT NULL,
+  `tanggalcetak_bukuktpdankk` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `formatpencetakan_bukulembarandesadanberitadesa`
 --
 
@@ -1415,6 +1604,39 @@ CREATE TABLE `formatpencetakan_bukulembarandesadanberitadesa` (
   `tahun_laporan` int(4) NOT NULL,
   `pamong_tertanda` varchar(85) NOT NULL,
   `pamong_mengetahui` varchar(85) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpencetakan_bukumutasipendudukdesa`
+--
+
+CREATE TABLE `formatpencetakan_bukumutasipendudukdesa` (
+  `id` int(11) NOT NULL,
+  `tanggalcetak_bmpd` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpencetakan_bukupenduduksementara`
+--
+
+CREATE TABLE `formatpencetakan_bukupenduduksementara` (
+  `id` int(11) NOT NULL,
+  `tanggalcetak_bps` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpencetakan_bukurekapitulasijumlahpenduduk`
+--
+
+CREATE TABLE `formatpencetakan_bukurekapitulasijumlahpenduduk` (
+  `id` int(11) NOT NULL,
+  `tanggalcetak_brjp` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1532,6 +1754,28 @@ CREATE TABLE `formatpengunduhan_bukuekspedisi` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `formatpengunduhan_bukuindukpenduduk`
+--
+
+CREATE TABLE `formatpengunduhan_bukuindukpenduduk` (
+  `id` int(11) NOT NULL,
+  `tanggalpengunduhan_bip` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpengunduhan_bukuktpdankk`
+--
+
+CREATE TABLE `formatpengunduhan_bukuktpdankk` (
+  `id` int(11) NOT NULL,
+  `tanggalpengunduhan_bukuktpdankk` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `formatpengunduhan_bukulembarandanberitadesa`
 --
 
@@ -1540,6 +1784,39 @@ CREATE TABLE `formatpengunduhan_bukulembarandanberitadesa` (
   `tahun_laporan` int(4) NOT NULL,
   `pamong_tertanda` varchar(85) NOT NULL,
   `pamong_mengetahui` varchar(85) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpengunduhan_bukumutasipendudukdesa`
+--
+
+CREATE TABLE `formatpengunduhan_bukumutasipendudukdesa` (
+  `id` int(11) NOT NULL,
+  `tanggalpengunduhan_bmpd` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpengunduhan_bukupenduduksementara`
+--
+
+CREATE TABLE `formatpengunduhan_bukupenduduksementara` (
+  `id` int(11) NOT NULL,
+  `tanggalpengunduhan_bps` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `formatpengunduhan_bukurekapitulasijumlahpenduduk`
+--
+
+CREATE TABLE `formatpengunduhan_bukurekapitulasijumlahpenduduk` (
+  `id` int(11) NOT NULL,
+  `tanggalpengunduhan_brjp` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2057,6 +2334,12 @@ ALTER TABLE `administrasibukuekspedisikhusus_siska`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `administrasibukuindukpendudukkhusus_siska`
+--
+ALTER TABLE `administrasibukuindukpendudukkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `administrasibukuinventarisdankekayaandesakhusus_siska`
 --
 ALTER TABLE `administrasibukuinventarisdankekayaandesakhusus_siska`
@@ -2069,15 +2352,39 @@ ALTER TABLE `administrasibukukeputusankepaladesakhusus_siska`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `administrasibukuktpdankkkhusus_siska`
+--
+ALTER TABLE `administrasibukuktpdankkkhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `administrasibukulembarandanberitadesakhusus_siska`
 --
 ALTER TABLE `administrasibukulembarandanberitadesakhusus_siska`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `administrasibukumutasipendudukdesakhusus_siska`
+--
+ALTER TABLE `administrasibukumutasipendudukdesakhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `administrasibukupenduduksementarakhusus_siska`
+--
+ALTER TABLE `administrasibukupenduduksementarakhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `administrasibukuperaturandesakhusus_siska`
 --
 ALTER TABLE `administrasibukuperaturandesakhusus_siska`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `administrasibukurekapitulasijumlahpendudukkhusus_siska`
+--
+ALTER TABLE `administrasibukurekapitulasijumlahpendudukkhusus_siska`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2451,9 +2758,39 @@ ALTER TABLE `formatpencetakan_bukuekspedisi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `formatpencetakan_bukuindukpenduduk`
+--
+ALTER TABLE `formatpencetakan_bukuindukpenduduk`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpencetakan_bukuktpdankk`
+--
+ALTER TABLE `formatpencetakan_bukuktpdankk`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `formatpencetakan_bukulembarandesadanberitadesa`
 --
 ALTER TABLE `formatpencetakan_bukulembarandesadanberitadesa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpencetakan_bukumutasipendudukdesa`
+--
+ALTER TABLE `formatpencetakan_bukumutasipendudukdesa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpencetakan_bukupenduduksementara`
+--
+ALTER TABLE `formatpencetakan_bukupenduduksementara`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpencetakan_bukurekapitulasijumlahpenduduk`
+--
+ALTER TABLE `formatpencetakan_bukurekapitulasijumlahpenduduk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2511,9 +2848,39 @@ ALTER TABLE `formatpengunduhan_bukuekspedisi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `formatpengunduhan_bukuindukpenduduk`
+--
+ALTER TABLE `formatpengunduhan_bukuindukpenduduk`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpengunduhan_bukuktpdankk`
+--
+ALTER TABLE `formatpengunduhan_bukuktpdankk`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `formatpengunduhan_bukulembarandanberitadesa`
 --
 ALTER TABLE `formatpengunduhan_bukulembarandanberitadesa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpengunduhan_bukumutasipendudukdesa`
+--
+ALTER TABLE `formatpengunduhan_bukumutasipendudukdesa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpengunduhan_bukupenduduksementara`
+--
+ALTER TABLE `formatpengunduhan_bukupenduduksementara`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `formatpengunduhan_bukurekapitulasijumlahpenduduk`
+--
+ALTER TABLE `formatpengunduhan_bukurekapitulasijumlahpenduduk`
   ADD PRIMARY KEY (`id`);
 
 --
