@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 //page layanan sebelum menautkan ke desa
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+
+class LayananPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
