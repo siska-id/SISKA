@@ -14,7 +14,7 @@ Nama Request POST
 header('Content-Type: application/json');
 require_once "db.php";
 session_start();
-// error_reporting(0);
+error_reporting(0);
 
 if (function_exists($_GET['function'])) {
     $_GET['function']();
@@ -25,6 +25,8 @@ if (function_exists($_GET['function'])) {
     );
     echo json_encode($response);
 }
+
+
 
 
 
@@ -52,8 +54,11 @@ function is_user_login()
     }
     $result = json_encode($response);
     echo $result;
-    return $result;
 }
+
+
+
+
 
 function logout_user()
 {
@@ -75,6 +80,9 @@ function logout_user()
     }
     echo json_encode($response);
 }
+
+
+
 
 
 # Function untuk Verifikasi masuk User.
@@ -117,6 +125,8 @@ function login_user()
     }
     echo json_encode($response);
 }
+
+
 
 
 
@@ -176,12 +186,82 @@ function register_user()
 }
 
 
+
+
+
 #Function untuk menambahkan/mendaftar akta kelahiran
 function insert_akta_kelahiran()
 {
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $jsondata = json_decode(is_user_login());
-        if ($jsondata->status == 1) {
+        global $db;
+        $session = $_SESSION['login'];
+        if (isset($session)) {
+            $qry = $db->prepare("SELECT * FROM userakun_siska WHERE alamat_email = '$session'");
+            $qry->execute();
+            $fetchData = $qry->fetch(PDO::FETCH_OBJ);
+
+            $userID = $fetchData->id_user;
+            $noAktaKelahiran = $_POST['noAktek'];
+            $namaLengkap = $_POST['fullname'];
+            $tempatLahir = $_POST['tempatlahir'];
+            $tanggalLahir = $_POST['tanggal'];
+            $bulanLahir = $_POST['bulan'];
+            $tahunLahir = $_POST['tahun'];
+            $anakno = $_POST['anakNo'];
+            $tempatdibuat = $_POST['tempatdibuat'];
+            $tanggalKeluar = $_POST['tanggalKeluar'];
+            $bulanKeluar = $_POST['bulanKeluar'];
+            $tahunKeluar = $_POST['tahunKeluar'];
+            $ketKepDinas = $_POST['ketkepdinas'];
+            $namaKepDinas = $_POST['namakepdinas'];
+            $nipKepDinas = $_POST['nipKepDinas'];
+            $params = array(
+                ":userid" => $userID,
+                ":noakta" => $noAktaKelahiran,
+                ":fullname" => $namaLengkap,
+                ":tempatlahir" => $tempatLahir,
+                ":tanggallahir" => $tanggalLahir,
+                ":bulanlahir" => $bulanLahir,
+                ":tahunlahir" => $tahunLahir,
+                ":anakno" => $anakno,
+                ":tempatdibuat" => $tempatdibuat,
+                ":tanggalkeluar" => $tanggalKeluar,
+                ":bulankeluar" => $bulanKeluar,
+                ":tahunkeluar" => $tahunKeluar,
+                ":ketkepdinas" => $ketKepDinas,
+                ":namakepdinas" => $namaKepDinas,
+                ":nipkepdinas" => $nipKepDinas
+            );
+
+            $query = $db->prepare("INSERT INTO aktakelahiran_siska (
+            user_id, 
+            nomor_aktakelahiran, 
+            tempat_lahir, 
+            tanggal_lahir, 
+            bulan_lahir, 
+            tahun_lahir, 
+            nama_lengkap, 
+            keterangan_anak_nomor, 
+            ketetapantempat_dibuataktakelahiran, 
+            tanggalkeluar_aktakelahiran,
+            bulankeluar_aktakelahiran,
+            tahunkeluar_aktakelahiran,
+            keterangankepaladinaskependudukan_danpencatatansipil,
+            namakepaladinaskependudukan_danpencatatansipil,
+            nipkepaladinaskependudukan_danpencatatansipil) VALUES (:userid, :noakta, :tempatlahir, :tanggallahir, :bulanlahir, :tahunlahir, :fullname, :anakno, :tempatdibuat, :tanggalkeluar, :bulankeluar, :tahunkeluar, :ketkepdinas, :namakepdinas, :nipkepdinas) ");
+
+            $insert = $query->execute($params);
+            if ($insert) {
+                $response = array(
+                    "status" => 1,
+                    "message" => "Berhasil membuat Akta Kelahiran atas nama : " . $namaLengkap
+                );
+            } else {
+                $response = array(
+                    "status" => 0,
+                    "message" => "Gagal membuat akta kelahiran atas nama : " . $namaLengkap
+                );
+            }
         } else {
             $response = array(
                 'status' => 0,
