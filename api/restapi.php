@@ -1,16 +1,6 @@
 <?php
 
-/*
-DOKUMENTASI SINGKAT
-
-Nama Request POST
-~ Nama Lengkap = fullname
-~ Alamat Email = email
-~ Nomor Telepon = telp
-~ Kata Sandi = pass
-
-*/
-
+date_default_timezone_set('Asia/Jakarta');
 header('Content-Type: application/json');
 require_once "db.php";
 session_start();
@@ -215,6 +205,7 @@ function insert_akta_kelahiran()
             $ketKepDinas = $_POST['ketkepdinas'];
             $namaKepDinas = $_POST['namakepdinas'];
             $nipKepDinas = $_POST['nipKepDinas'];
+            $created_at = date('d-m-Y H:i:s');
             $params = array(
                 ":userid" => $userID,
                 ":noakta" => $noAktaKelahiran,
@@ -230,11 +221,11 @@ function insert_akta_kelahiran()
                 ":tahunkeluar" => $tahunKeluar,
                 ":ketkepdinas" => $ketKepDinas,
                 ":namakepdinas" => $namaKepDinas,
-                ":nipkepdinas" => $nipKepDinas
+                ":nipkepdinas" => $nipKepDinas,
+                ":created_at" => $created_at
             );
 
             $query = $db->prepare("INSERT INTO aktakelahiran_siska (
-            user_id, 
             nomor_aktakelahiran, 
             tempat_lahir, 
             tanggal_lahir, 
@@ -248,7 +239,9 @@ function insert_akta_kelahiran()
             tahunkeluar_aktakelahiran,
             keterangankepaladinaskependudukan_danpencatatansipil,
             namakepaladinaskependudukan_danpencatatansipil,
-            nipkepaladinaskependudukan_danpencatatansipil) VALUES (:userid, :noakta, :tempatlahir, :tanggallahir, :bulanlahir, :tahunlahir, :fullname, :anakno, :tempatdibuat, :tanggalkeluar, :bulankeluar, :tahunkeluar, :ketkepdinas, :namakepdinas, :nipkepdinas) ");
+            nipkepaladinaskependudukan_danpencatatansipil,
+            created_at,
+            created_by) VALUES (:noakta, :tempatlahir, :tanggallahir, :bulanlahir, :tahunlahir, :fullname, :anakno, :tempatdibuat, :tanggalkeluar, :bulankeluar, :tahunkeluar, :ketkepdinas, :namakepdinas, :nipkepdinas, :userid, :created_at) ");
 
             $insert = $query->execute($params);
             if ($insert) {
@@ -275,4 +268,33 @@ function insert_akta_kelahiran()
         );
     }
     echo json_encode($response);
+}
+
+
+
+function insert_kartu_keluarga()
+{
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        global $db;
+        $session = $_SESSION['login'];
+        if (isset($session)) {
+            $qry = $db->prepare("SELECT * FROM userakun_siska WHERE alamat_email = '$session'");
+            $qry->execute();
+            $fetchData = $qry->fetch(PDO::FETCH_OBJ);
+
+            $userid = $fetchData->id_user;
+            $nokk = $_POST['nokk'];
+            $nama_kepkeluarga = $_POST['namakepkel'];
+            $alamatkk = $_POST['alamatkk'];
+            $rtrw = $_POST['rt_rw'];
+            $desa_kelurahan = $_POST['desakel'];
+            $kecamatan = $_POST['kecamat'];
+            $kab_kota = $_POST['kabkota'];
+            $kodepos = $_POST['kodepos'];
+            $provinsi = $_POST['provinsi'];
+            $no_urut_keluarga = $_POST['nourtkel'];
+            $namalngkap = $_POST['namalngkap'];
+
+        }
+    }
 }
