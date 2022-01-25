@@ -177,6 +177,56 @@ function register_user()
 
 
 
+function update_akta_kelahiran()
+{
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        global $db;
+        $session = $_SESSION['login'];
+        if (isset($session)) {
+            $qry = $db->prepare("SELECT * FROM userakun_siska WHERE alamat_email = '$session'");
+            $qry->execute();
+            $fetchData = $qry->fetch(PDO::FETCH_OBJ);
+
+            $userID = $fetchData->id_user;
+            $noAktaKelahiran = $_POST['noAktek'];
+            $namaLengkap = $_POST['fullname'];
+            $tempatLahir = $_POST['tempatlahir'];
+            $tanggalLahir = $_POST['tanggal'];
+            $bulanLahir = $_POST['bulan'];
+            $tahunLahir = $_POST['tahun'];
+            $anakno = $_POST['anakNo'];
+            $tempatdibuat = $_POST['tempatdibuat'];
+            $tanggalKeluar = $_POST['tanggalKeluar'];
+            $bulanKeluar = $_POST['bulanKeluar'];
+            $tahunKeluar = $_POST['tahunKeluar'];
+            $ketKepDinas = $_POST['ketkepdinas'];
+            $namaKepDinas = $_POST['namakepdinas'];
+            $nipKepDinas = $_POST['nipKepDinas'];
+            $updated_at  = date('d-m-Y H:i:s');
+            $params = array(
+                ":userid" => $userID,
+                ":noakta" => $noAktaKelahiran,
+                ":fullname" => $namaLengkap,
+                ":tempatlahir" => $tempatLahir,
+                ":tanggallahir" => $tanggalLahir,
+                ":bulanlahir" => $bulanLahir,
+                ":tahunlahir" => $tahunLahir,
+                ":anakno" => $anakno,
+                ":tempatdibuat" => $tempatdibuat,
+                ":tanggalkeluar" => $tanggalKeluar,
+                ":bulankeluar" => $bulanKeluar,
+                ":tahunkeluar" => $tahunKeluar,
+                ":ketkepdinas" => $ketKepDinas,
+                ":namakepdinas" => $namaKepDinas,
+                ":nipkepdinas" => $nipKepDinas,
+                ":created_at" => $created_at
+            );
+
+        }
+    }
+}
+
+
 
 
 #Function untuk menambahkan/mendaftar akta kelahiran
@@ -241,7 +291,7 @@ function insert_akta_kelahiran()
             namakepaladinaskependudukan_danpencatatansipil,
             nipkepaladinaskependudukan_danpencatatansipil,
             created_at,
-            created_by) VALUES (:noakta, :tempatlahir, :tanggallahir, :bulanlahir, :tahunlahir, :fullname, :anakno, :tempatdibuat, :tanggalkeluar, :bulankeluar, :tahunkeluar, :ketkepdinas, :namakepdinas, :nipkepdinas, :userid, :created_at) ");
+            created_by) VALUES (:noakta, :tempatlahir, :tanggallahir, :bulanlahir, :tahunlahir, :fullname, :anakno, :tempatdibuat, :tanggalkeluar, :bulankeluar, :tahunkeluar, :ketkepdinas, :namakepdinas, :nipkepdinas, :created_at, :userid) ");
 
             $insert = $query->execute($params);
             if ($insert) {
