@@ -1,5 +1,6 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:siskaproject/profil.dart';
 import 'package:siskaproject/tautkan.dart';
 import 'layanan.dart';
 import 'tautkan.dart';
@@ -7,7 +8,7 @@ import 'login.dart';
 import 'home.dart';
 import 'buatakun.dart';
 
-void main() => runApp(BuatPage());
+void main() => runApp(ProfilPage());
 
 class NavBar extends StatelessWidget {
   @override
