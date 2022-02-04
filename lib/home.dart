@@ -1,7 +1,4 @@
-
-
 import 'package:flutter/material.dart';
-
 
 class HomePage extends StatelessWidget {
   @override
@@ -52,115 +49,99 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //1
-                   ElevatedButton(
+                  ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.account_box_outlined,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.account_box_outlined,
+                            size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                   //2
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.assignment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.assignment_outlined,
+                            size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                   //3
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.assessment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.assessment_outlined,
+                            size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                   //4
-                   ElevatedButton(
+                  ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.contact_phone_outlined,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.contact_phone_outlined,
+                            size: 35, color: Colors.blue),
                         Text(
                           "Kontak ",
-                          style: TextStyle(fontSize: 7,color:Colors.blue),
+                          style: TextStyle(fontSize: 7, color: Colors.blue),
                         ),
                         Text(
                           "Penting",
-                          style: TextStyle(fontSize: 7,color:Colors.blue),
+                          style: TextStyle(fontSize: 7, color: Colors.blue),
                         ),
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                 ],
@@ -174,109 +155,92 @@ class HomePage extends StatelessWidget {
                   //5
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.card_travel,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.card_travel, size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                   //6
-                   ElevatedButton(
+                  ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.assignment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.assignment_outlined,
+                            size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                   //7
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.desktop_windows_rounded,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.desktop_windows_rounded,
+                            size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                   //8
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(7.7),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      shadowColor: Colors.grey,
-                      primary: Colors.white
-                    ),
+                        padding: EdgeInsets.all(7.7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        shadowColor: Colors.grey,
+                        primary: Colors.white),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.assignment_outlined,
-                          size: 35,color:Colors.blue
-                        ),
+                        Icon(Icons.assignment_outlined,
+                            size: 35, color: Colors.blue),
                         Text(
                           "XX",
-                          style: TextStyle(fontSize: 12,color:Colors.blue),
+                          style: TextStyle(fontSize: 12, color: Colors.blue),
                         )
                       ],
                     ),
                     onPressed: () {
                       print('check');
-                      
                     },
                   ),
                 ],
