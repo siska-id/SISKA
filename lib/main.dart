@@ -1,14 +1,15 @@
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:siskaproject/profil.dart';
 import 'package:siskaproject/tautkan.dart';
 import 'layanan.dart';
 import 'tautkan.dart';
 import 'login.dart';
 import 'home.dart';
 import 'buatakun.dart';
+import 'surat.dart';
+import 'konfirmasi.dart';
+import 'IsiLayanan.dart';
 
-void main() => runApp(ProfilPage());
+void main() => runApp(IsiLayanan());
 
 class NavBar extends StatelessWidget {
   @override
@@ -16,6 +17,7 @@ class NavBar extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
+       
         bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: Colors.grey,
           selectedItemColor: Color.fromRGBO(51, 157, 255, 1),

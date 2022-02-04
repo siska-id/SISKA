@@ -1,8 +1,6 @@
 <p align="center">
-   <img src="https://iili.io/ls1nkv.png" height="250" width="250">
+   <img src="https://i.ibb.co/gSBbktQ/Round-Corner-1.png" height="230" width="230">
 </p>
-
-<br>
 
 # SISKA
 
@@ -58,12 +56,12 @@ Untuk Gambar sendiri secara jelas dan urut yaitu sebagai berikut
 
 ![ss siska 2](https://user-images.githubusercontent.com/87738971/145867373-311d5d11-0baf-4439-b0ac-dbc5ed236b05.jpg)
 
-<p align="center">
-   <img src="https://iili.io/lpWbZ7.png" height="450" width="400">
-   <img src="https://iili.io/lpWDjS.png" height="450" width="400">
-</p>
 
 Nah, untuk gambar diatas dapat ditebak adalah Gambar dari SISKA yang terdiri dari Tulisan Siska itu sendiri serta juga Tulisan Sistem Informasi Desa dan Kawasan yang menjadi Penyempurna pada Kalimat SISKA itu sendiri.
+
+
+![ss siska 3](https://user-images.githubusercontent.com/87738971/145868455-f37673ba-7684-455f-947f-c97c1962311b.jpg)
+![ss siska 4](https://user-images.githubusercontent.com/87738971/145868499-afe91e17-deb6-453c-9bce-1c910e86da51.jpg)
 
 
 Lalu, juga terdapat suatu Gambar yang menjelaskan tentang suatu deskripsi atau identitas pada SISKA Mobile itu sendiri, namun dengan konteks atau mengarah pada suatu Komponen Penting yang digunakan untuk menyusun suatu Project SISKA Mobile itu sendiri dengan menonjolkan suatu ciri khas serta keterangan pada SISKA Mobile dan juga Aturan pakai itu sendiri agar dapat digunakan secara sukses dan juga berhasil. Untuk lebih jelasnya, dalam Gambar tersebut terdapat Jenis Collor Pallet, Plugins, Font dan juga Keterangan dan juga Fungsi Tombol pada penggunaan SISKA Mobile.
