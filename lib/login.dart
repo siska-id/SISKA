@@ -1,15 +1,43 @@
 import 'dart:convert';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'api.dart';
+import 'home.dart';
 
-class LoginPage extends StatelessWidget {
-  String apiUrl = Api.url;
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  TextEditingController _email = TextEditingController();
+  TextEditingController _password = TextEditingController();
+
+  String apiLogin = Api.login;
   String errorMsg = "";
 
   getApi(String email, String password) async{
-    final res = await http.post(apiUrl, body: {"email" : email, "password" : password});
-    final data = jsonDecode(res.body);
+    final response = await http.post(Uri.parse(apiLogin), body: {
+      "email" : email, 
+      "password" : password
+      });
+    final datares = jsonDecode(response.body);
+
+    if (datares['status'] == 1) {
+      print(datares['message']);
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (c) => HomePage(email: datares['email'])));
+        _email.clear();
+        _password.clear();
+        setState(() {
+          errorMsg = datares['message'];
+        });
+    } else if (datares['status'] == 0) {
+      setState(() {
+        errorMsg = datares['message'];
+      });
+    }
   }
 
   @override
@@ -28,7 +56,7 @@ class LoginPage extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 30),
+                  padding: const EdgeInsets.only(top: 40, bottom: 20),
                   child: Text(
                     "Masuk",
                     textAlign: TextAlign.center,
@@ -38,15 +66,21 @@ class LoginPage extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
+                // SizedBox(
+                //   height: 5.0,
+                // ),
+                Center(
+                child: Text(errorMsg, style: TextStyle(color: Colors.red)),
+              ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 60, right: 50, left: 50),
+                  padding: const EdgeInsets.only(top: 40, right: 30, left: 30),
                   child: TextFormField(
-                    controller: inptEmail,
+                    controller: _email,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(25))),
-                      hintText: 'adminsiska@gmail.com',
-                      labelText: 'Username/email',
+                      hintText: 'email@example.com',
+                      labelText: 'Alamat Email',
                       prefixIcon: Icon(Icons.person),
                     ),
                     keyboardType: TextInputType.emailAddress,
@@ -54,34 +88,43 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40, right: 50, left: 50),
-                  child: TextField(
+                  padding: const EdgeInsets.only(top: 30, right: 30, left: 30),
+                  child: TextFormField(
+                    controller: _password,
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(25))),
+                      borderRadius: BorderRadius.all(Radius.circular(25))),
                       hintText: '*********',
-                      labelText: 'Password',
+                      labelText: 'Kata Sandi',
                       prefixIcon: Icon(Icons.person),
                     ),
                     keyboardType: TextInputType.emailAddress,
                     showCursor: true,
-                    obscureText: true,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
+                SizedBox(
+                height: 20.0,
+              ),
+                Material(
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15))),
                       onPressed: () {
-                        print("Login Berhasil");
+                        getApi(_email.text, _password.text);
                       },
                       child: Text(
                         "Masuk",
                         style: TextStyle(fontSize: 18),
                       )),
-                )
+                ),
+              //   SizedBox(
+              //     height: 10.0,
+              //   ),
+              //   Center(
+              //   child: Text(errorMsg, style: TextStyle(color: Colors.red)),
+              // ),
               ],
             ),
           ),
