@@ -255,40 +255,7 @@ class HomePage extends StatelessWidget {
                 )),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          unselectedItemColor: Colors.grey,
-          selectedItemColor: Color.fromRGBO(51, 157, 255, 1),
-          elevation: 20,
-          iconSize: 25,
-          showSelectedLabels: true,
-          showUnselectedLabels: true,
-          items: [
-            BottomNavigationBarItem(
-              label: "Home",
-              icon: Icon(
-                Icons.home_outlined,
-              ),
-            ),
-            BottomNavigationBarItem(
-              label: "Layanan",
-              icon: Icon(
-                Icons.assignment_outlined,
-              ),
-            ),
-            BottomNavigationBarItem(
-              label: "Berita",
-              icon: Icon(
-                Icons.auto_stories_outlined,
-              ),
-            ),
-            BottomNavigationBarItem(
-              label: "Profil",
-              icon: Icon(
-                Icons.person_outlined,
-              ),
-            ),
-          ],
-        ),
+        
       ),
     );
   }
