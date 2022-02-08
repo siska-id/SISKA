@@ -23,7 +23,7 @@ class _MyBottomBarDemoState extends State<MyBottomBarDemo> {
   late PageController _pageController;
 
   List<Widget> tabPages = [
-    HomePage(),
+    HomePage(email: '',),
     LayananPage(),
     TautkanPage(),
     ProfilPage()
