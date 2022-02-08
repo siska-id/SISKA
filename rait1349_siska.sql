@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 25 Jan 2022 pada 14.35
+-- Waktu pembuatan: 08 Feb 2022 pada 09.13
 -- Versi server: 10.2.41-MariaDB-cll-lve
 -- Versi PHP: 7.4.27
 
@@ -29,10 +29,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administrasibukuagendasuratkeluarkhusus_siska` (
   `id` int(11) NOT NULL,
-  `input_penambahandatasuratkeluarbaru` longtext NOT NULL,
-  `inputpenghapusan_datayangterpilihdalamagendasuratkeluar` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `inputpencetakan_agendasuratkeluar` mediumtext NOT NULL,
-  `inputpengunduhan_agendasuratkeluar` mediumtext NOT NULL,
   `ketentuan_tahun` int(4) NOT NULL,
   `no_urut` int(5) NOT NULL,
   `nomor_surat` varchar(50) NOT NULL,
@@ -48,10 +44,6 @@ CREATE TABLE `administrasibukuagendasuratkeluarkhusus_siska` (
 
 CREATE TABLE `administrasibukuagendasuratmasukkhusus_siska` (
   `id` int(11) NOT NULL,
-  `input_penambahandisposisisuratmasuk` longtext NOT NULL,
-  `inputpenghapusan_datayangterpilihdalamagendasuratmasuk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `inputpencetakan_agendasuratmasuk` mediumtext NOT NULL,
-  `inputpengunduhan_agendasuratkeluar` mediumtext NOT NULL,
   `tahunpenerimaan_suratmasuk` int(4) NOT NULL,
   `no_urutuser` int(5) NOT NULL,
   `aksi_padadatabaseadministrasibukuagendasuratmasuk` point NOT NULL,
@@ -68,9 +60,6 @@ CREATE TABLE `administrasibukuagendasuratmasukkhusus_siska` (
 
 CREATE TABLE `administrasibukuaparatpemerintahdesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `input_penambahandataaparatpemerintahandesa` longtext NOT NULL,
-  `inputpencetakandata_aparatpemerintahdesa` mediumtext NOT NULL,
-  `inputpengunduhandata_aparatpemerintahdesa` mediumtext NOT NULL,
   `statuskelola_aktifatautidaknyadataaparatpemerintahdesa` varchar(15) NOT NULL,
   `image_userataupendudukdalamdata` blob NOT NULL,
   `namanipataunipdsertanik_userataupenduduk` varchar(150) NOT NULL,
@@ -157,8 +146,6 @@ CREATE TABLE `administrasibukubankdesakhusus_siska` (
 
 CREATE TABLE `administrasibukuekspedisikhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_bukuekspedisi` mediumtext NOT NULL,
-  `inputpengunduhan_bukuekspedisi` mediumtext NOT NULL,
   `ketentuantahun_padadata` int(4) NOT NULL,
   `tanggalpengiriman_surataubuku` varchar(50) NOT NULL,
   `no_suratataubuku` varchar(65) NOT NULL,
@@ -176,9 +163,6 @@ CREATE TABLE `administrasibukuekspedisikhusus_siska` (
 
 CREATE TABLE `administrasibukuindukpendudukkhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_bukuindukpenduduk` mediumtext NOT NULL,
-  `inputpengunduhan_bukuindukpenduduk` mediumtext NOT NULL,
-  `refresh_halamandatabaseindukpenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `pemilihan_bulan` varchar(20) NOT NULL,
   `nomorurut_userataupenduduk` int(5) NOT NULL,
@@ -205,8 +189,6 @@ CREATE TABLE `administrasibukuindukpendudukkhusus_siska` (
 
 CREATE TABLE `administrasibukuinventarisdankekayaandesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakaninventaris_desa` mediumtext NOT NULL,
-  `inputpengunduhaninventaris_desa` mediumtext NOT NULL,
   `keterangantahun_dalamdatainventarisdankekayaandesa` int(4) NOT NULL,
   `jenisbarang_ataubangunan` varchar(150) NOT NULL,
   `keteranganasalbarangbangunan_dibelisendiridengannamaataujumlah` varchar(50) NOT NULL,
@@ -250,8 +232,6 @@ CREATE TABLE `administrasibukuinventarishasilhasilpembangunankhusus_siska` (
 
 CREATE TABLE `administrasibukukaderpemberdayaanmasyarakatkhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpenambahan_datakaderpemberdayaanmasyarakat` longtext NOT NULL,
-  `input_print` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `nomor_urut` int(5) NOT NULL,
   `nama_userataupenduduk` varchar(64) NOT NULL,
@@ -364,8 +344,6 @@ CREATE TABLE `administrasibukukasumumkhusus_siska` (
 
 CREATE TABLE `administrasibukukegiatanpembangunankhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpenambahan_datakegiatanpembangunan` longtext NOT NULL,
-  `input_print` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `nomor_urut` int(5) NOT NULL,
   `nama_proyek` varchar(75) NOT NULL,
@@ -385,10 +363,6 @@ CREATE TABLE `administrasibukukegiatanpembangunankhusus_siska` (
 
 CREATE TABLE `administrasibukukeputusankepaladesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `pengaturandanpenambahan_skkadesbaru` longtext NOT NULL,
-  `inputpenghapusan_datayangterpilihdalamskkades` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `inputpencetakanlaporan_skkades` mediumtext NOT NULL,
-  `inputpengunduhanlaporan_skkades` mediumtext NOT NULL,
   `statusaktifatautidakaktif_skkades` varchar(25) NOT NULL,
   `layananpencarian_datayangterdapatdalamdatabaseskkades` varchar(200) NOT NULL,
   `judul_dalamskkades` varchar(75) NOT NULL,
@@ -406,9 +380,6 @@ CREATE TABLE `administrasibukukeputusankepaladesakhusus_siska` (
 
 CREATE TABLE `administrasibukuktpdankkkhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_bukuktpdankk` mediumtext NOT NULL,
-  `inputpengunduhan_bukuktpdankk` mediumtext NOT NULL,
-  `refresh_ataupembersihanfilterdalamdatabase` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `pemilihan_bulan` varchar(25) NOT NULL,
   `nomor_urutbukuktpdankk` int(5) NOT NULL,
@@ -440,8 +411,6 @@ CREATE TABLE `administrasibukuktpdankkkhusus_siska` (
 
 CREATE TABLE `administrasibukulembarandanberitadesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_laporanberitadesa` mediumtext NOT NULL,
-  `inputpengunduhan_laporanberitadesa` mediumtext NOT NULL,
   `status_laporan` varchar(25) NOT NULL,
   `jenisperaturan_padalaporan` varchar(100) NOT NULL,
   `judul_lembaranataulaporaneberitadesa` varchar(80) NOT NULL,
@@ -460,9 +429,6 @@ CREATE TABLE `administrasibukulembarandanberitadesakhusus_siska` (
 
 CREATE TABLE `administrasibukumutasipendudukdesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_bukumutasipendudukdesa` mediumtext NOT NULL,
-  `inputpengunduhan_bukumutasipendudukdesa` mediumtext NOT NULL,
-  `refresh_halamandatabasemutasipenduduk` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `pemilihan_bulan` varchar(25) NOT NULL,
   `nomor_urutpenduduk` int(5) NOT NULL,
@@ -487,9 +453,6 @@ CREATE TABLE `administrasibukumutasipendudukdesakhusus_siska` (
 
 CREATE TABLE `administrasibukupenduduksementarakhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_bukupenduduksementara` mediumtext NOT NULL,
-  `inputpengunduhan_bukupenduduksementara` mediumtext NOT NULL,
-  `refresh_ataupembersihanfilterdalamdatabase` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `pemilihan_bulan` int(25) NOT NULL,
   `nomor_urutbukups` int(5) NOT NULL,
@@ -518,10 +481,6 @@ CREATE TABLE `administrasibukupenduduksementarakhusus_siska` (
 
 CREATE TABLE `administrasibukuperaturandesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `pengaturandanpenambahan_perdesbaru` longtext NOT NULL,
-  `inputpenghapusan_datayangterpilihdalamperdes` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `inputpencetakan_laporanataudokumenperaturandesa` mediumtext NOT NULL,
-  `inputpengunduhan_laporanataudokumenperdes` mediumtext NOT NULL,
   `status_perdes` varchar(40) NOT NULL,
   `jenisperaturan_desa` varchar(100) NOT NULL,
   `inputpencarian_data` varchar(200) NOT NULL,
@@ -541,8 +500,6 @@ CREATE TABLE `administrasibukuperaturandesakhusus_siska` (
 
 CREATE TABLE `administrasibukurekapitulasijumlahpendudukkhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpencetakan_bukurekapitulasijumlahpenduduk` mediumtext NOT NULL,
-  `inputpengunduhan_bukurekapitulasijumlahpenduduk` mediumtext NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `pemilihan_bulan` varchar(25) NOT NULL,
   `nomor_urut` int(5) NOT NULL,
@@ -610,16 +567,12 @@ CREATE TABLE `administrasibukurencanaanggaranbiayakhusus_siska` (
 
 CREATE TABLE `administrasibukurencanakerjapembangunankhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpenambahan_datarencanakerjapembangunan` longtext NOT NULL,
-  `input_print` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `pemilihan_tahun` int(4) NOT NULL,
   `nomor_urut` int(5) NOT NULL,
   `nama_proyek` varchar(75) NOT NULL,
   `lokasi_proyek` varchar(50) NOT NULL,
   `biaya_proyek` varchar(35) NOT NULL,
-  `pelaksana_proyek` varchar(15) NOT NULL,
-  `tindakan_editdatarencanakerjapembangunan` longtext NOT NULL,
-  `input_hapustindakan` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+  `pelaksana_proyek` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -630,9 +583,6 @@ CREATE TABLE `administrasibukurencanakerjapembangunankhusus_siska` (
 
 CREATE TABLE `administrasibukutanahdidesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `input_penambahandatabukutanahdidesa` longtext NOT NULL,
-  `inputpencetakan_bukutanahdidesa` mediumtext NOT NULL,
-  `inputpengunduhan_bukutanahdidesa` mediumtext NOT NULL,
   `namaperorangan_ataubadanhukum` varchar(75) NOT NULL,
   `luastotal_tanah` varchar(40) NOT NULL,
   `mutasi_tanah` varchar(65) NOT NULL,
@@ -647,10 +597,6 @@ CREATE TABLE `administrasibukutanahdidesakhusus_siska` (
 
 CREATE TABLE `administrasibukutanahkasdesakhusus_siska` (
   `id` int(11) NOT NULL,
-  `inputpenambahandata_bukutanahkasdesa` longtext NOT NULL,
-  `inputpencetakan_bukutanahkasdesa` varchar(50) NOT NULL,
-  `inputpengunduhan_bukutanahkasdesa` varchar(50) NOT NULL,
-  `tampilandataatauentri_yangsudahmasukatauterdaftardalamdatabase` int(5) NOT NULL,
   `nomorsertifikat_bukulettercataupersil` varchar(45) NOT NULL,
   `kelas_administrasibukutanahkasdesa` varchar(75) NOT NULL,
   `luastotal_tanah` varchar(20) NOT NULL,
@@ -818,7 +764,11 @@ CREATE TABLE `daftarprovinsi_siska` (
   `provinsi_malukuutara` varchar(20) NOT NULL,
   `provinsi_maluku` varchar(5) NOT NULL,
   `provinsi_papuabarat` varchar(10) NOT NULL,
-  `provinsi_papua` varchar(8) NOT NULL
+  `provinsi_papua` varchar(8) NOT NULL,
+  `created_at` timestamp(1) NOT NULL DEFAULT current_timestamp(1),
+  `created_by` int(11) DEFAULT NULL,
+  `updated_at` timestamp(1) NOT NULL DEFAULT current_timestamp(1),
+  `updated_by` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -982,7 +932,6 @@ CREATE TABLE `datakeluargakhususkependudukan_siska` (
   `status_kartukeluarga` varchar(50) NOT NULL,
   `jeniskelamin_userataupenduduk` varchar(20) NOT NULL,
   `pemilihan_dusunataudesa` varchar(150) NOT NULL,
-  `pilihanlayanan_yangdisediakanaksi` point NOT NULL,
   `image_pendudukatauuser` blob NOT NULL,
   `nomorkk_penduduk` int(16) NOT NULL,
   `nama_kepalakeluarga` varchar(64) NOT NULL,
@@ -1109,7 +1058,6 @@ CREATE TABLE `datapendidikanyangsedangditempuhdalamstatistikkhusus_siska` (
 CREATE TABLE `datapendudukkhususkependudukan_siska` (
   `pilihdesa_ataudusun` varchar(25) NOT NULL,
   `id` int(11) NOT NULL,
-  `pengalihan_tampilandenganberbagaidaftar` longtext NOT NULL,
   `fotoatauimage_penduduk` blob NOT NULL,
   `nik_pendudukdesa` int(16) NOT NULL,
   `namalengkap_penduduk` varchar(64) NOT NULL,
@@ -1140,8 +1088,7 @@ CREATE TABLE `datapendudukkhususkependudukan_siska` (
 
 CREATE TABLE `datapengelolaankelompokkhususpenduduk_siska` (
   `id` int(11) NOT NULL,
-  `kategori_kelompokpengelolaanpenduduk` varchar(100) NOT NULL,
-  `layanan_aksipadapengelolaan` point NOT NULL,
+  `kategori_kelompokpengelolaanpenduduk` varchar(75) NOT NULL,
   `kode_kelompok` int(50) NOT NULL,
   `nama_kelompok` varchar(75) NOT NULL,
   `pernyataan_ketuakelompok` varchar(50) NOT NULL,
@@ -1158,7 +1105,6 @@ CREATE TABLE `datapengelolaankelompokkhususpenduduk_siska` (
 CREATE TABLE `datapengelompokkanrumahtanggakhusus_siska` (
   `id` int(11) NOT NULL,
   `pemilihan_dusunataudesa` varchar(75) NOT NULL,
-  `layanan_aksi` point NOT NULL,
   `image_ataufotopenduduk` blob NOT NULL,
   `nomor_rumahtangga` varchar(30) NOT NULL,
   `nama_kepalakeluarga` varchar(64) NOT NULL,
@@ -1215,9 +1161,7 @@ CREATE TABLE `datapenyandangcacatstatistikkhusus_siska` (
 
 CREATE TABLE `datarentangumurdalamstatistikkhusus_siska` (
   `id` int(11) NOT NULL,
-  `layananaksiumur_yangdiubahataudihapusdalamdata` point NOT NULL,
-  `rentang_umur` varchar(20) NOT NULL,
-  `tambah_rentangumur` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+  `rentang_umur` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1299,8 +1243,6 @@ CREATE TABLE `datastatistikkeluargakelassosialkhusus_siska` (
 
 CREATE TABLE `datastatistiklaporankelompokrentanmumurkhusus_siska` (
   `id` int(11) NOT NULL,
-  `proses_pencetakandokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `proses_pengunduhandokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `nama_desaataukelurahandalamlaporanrentanumur` varchar(50) NOT NULL,
   `nama_kecamatandalamlaporanrentanumur` varchar(40) NOT NULL,
   `laporan_bulan` int(2) NOT NULL,
@@ -1336,8 +1278,6 @@ CREATE TABLE `datastatistiklaporankelompokrentanmumurkhusus_siska` (
 
 CREATE TABLE `datastatistiklaporankependudukanbulanankhusus_siska` (
   `id` int(11) NOT NULL,
-  `proses_cetakdokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `proses_pengunduhandokumen` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `namadesa_ataukelurahan` varchar(75) NOT NULL,
   `namakecamatan_padalaporankependudukanbulanan` varchar(50) NOT NULL,
   `tahun_padalaporankependudukanbulanan` int(4) NOT NULL,
@@ -1545,7 +1485,6 @@ CREATE TABLE `datastatusperkawinanstatistikkhusus_siska` (
 CREATE TABLE `datasuplemenkependudukankhusus_siska` (
   `id` int(11) NOT NULL,
   `pemilihan_sasaransuplemen` varchar(50) NOT NULL,
-  `layanan_aksisuplemen` point NOT NULL,
   `nama_data` varchar(64) NOT NULL,
   `jumlah_yangterdata` int(5) NOT NULL,
   `sasaran_suplemen` varchar(100) NOT NULL,
@@ -1663,7 +1602,7 @@ CREATE TABLE `formatlengkap_disposisisuratagendamasuk` (
   `tanggal_suratmasuk` int(10) NOT NULL,
   `nama_pengirim` varchar(64) NOT NULL,
   `isisingkat_atauperihalsuratmasuk` varchar(150) NOT NULL,
-  `tujuan_disposisikepada` varchar(120) NOT NULL,
+  `tujuan_disposisikepada` varchar(100) NOT NULL,
   `isi_disposisi` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -2366,7 +2305,7 @@ CREATE TABLE `kartukeluarga_siska` (
   `kecamatan` varchar(55) NOT NULL,
   `kabupaten_kota` varchar(50) NOT NULL,
   `kode_pos` int(5) NOT NULL,
-  `provinsi` varchar(50) NOT NULL,
+  `provinsi` int(2) NOT NULL,
   `nomor_urutkeluarga` int(2) NOT NULL,
   `namalengkapmasingmasing_kepaladananggotakeluarga` longtext NOT NULL,
   `nik` int(17) NOT NULL,
@@ -2418,7 +2357,11 @@ CREATE TABLE `kartutandapenduduk_siska` (
   `pekerjaan_userataupenduduk` int(1) NOT NULL,
   `kewarganegaraan_userataupenduduk` int(1) NOT NULL,
   `pemberlakukanktp_userataupenduduk` varchar(10) NOT NULL,
-  `tanggalpembuatan_ktp` varchar(10) NOT NULL
+  `tanggalpembuatan_ktp` varchar(10) NOT NULL,
+  `created_at` timestamp(1) NOT NULL DEFAULT current_timestamp(1),
+  `created_by` int(11) DEFAULT NULL,
+  `updated_at` timestamp(1) NOT NULL DEFAULT current_timestamp(1),
+  `updated_by` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -2435,7 +2378,7 @@ CREATE TABLE `kontakpenting_siska` (
   `pln_desa` longtext NOT NULL,
   `pdam_desa` longtext NOT NULL,
   `polres_desaataudaerah` longtext NOT NULL,
-  `sosial_mediasiska` longtext NOT NULL,
+  `sosialmedia_siska` longtext NOT NULL,
   `ketua_rtdanrwdesa` longtext NOT NULL,
   `layanan_kesehatandaerah` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -2528,13 +2471,13 @@ CREATE TABLE `suratizintempatusaha_siska` (
   `keterangan_suratizintempatusaha` varchar(50) NOT NULL,
   `nomor_suratizintempatusaha` varchar(50) NOT NULL,
   `nama_perusahaanatautoko` varchar(100) NOT NULL,
-  `alamatlengkap_perusahaanatautoko` longtext NOT NULL,
+  `alamatlengkap_perusahaanatautoko` varchar(100) NOT NULL,
   `bidang_usaha` varchar(200) NOT NULL,
   `namapenanggungjawab_ataupimpinandandirektur` varchar(150) NOT NULL,
   `luas_tempatusaha` varchar(65) NOT NULL,
   `berlaku_sdtanggal` varchar(70) NOT NULL,
-  `pernyataandanpenjelasan_keterangansitu` longtext NOT NULL,
-  `ketentuan_berlakunyasuratizintempatusaha` longtext NOT NULL,
+  `pernyataandanpenjelasan_keterangansitu` varchar(200) NOT NULL,
+  `ketentuan_berlakunyasuratizintempatusaha` varchar(150) NOT NULL,
   `ketetapantempat_suratizintempatusahadikeluarkan` varchar(50) NOT NULL,
   `waktu_keluaransitu` varchar(50) NOT NULL,
   `keterangan_kepaladesadaerah` varchar(100) NOT NULL,
@@ -2554,15 +2497,15 @@ CREATE TABLE `suratizinusaha_siska` (
   `namaperusahaan_atautempatbekerja` varchar(256) NOT NULL,
   `nomorinduk_berusaha` int(16) NOT NULL,
   `alamatperusahaan_atautempatbekerja` varchar(256) NOT NULL,
-  `nama_kbli` longtext NOT NULL,
+  `nama_kbli` varchar(120) NOT NULL,
   `kode_kbli` varchar(100) NOT NULL,
-  `alamatlengkap_usaha` mediumtext NOT NULL,
+  `alamatlengkap_usaha` varchar(150) NOT NULL,
   `alamatsingkat_usaha` varchar(150) NOT NULL,
   `desaataukelurahan_usaha` varchar(50) NOT NULL,
   `kecamatan_usaha` varchar(50) NOT NULL,
   `kabupatenataukota_usaha` varchar(75) NOT NULL,
   `provinsi_usaha` varchar(100) NOT NULL,
-  `pernyataanwaktu_keluaransurat` mediumtext NOT NULL,
+  `pernyataanwaktu_keluaransurat` varchar(75) NOT NULL,
   `code_qr` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -2583,7 +2526,7 @@ CREATE TABLE `suratketeranganberpergian_siska` (
   `agama` varchar(20) NOT NULL,
   `pekerjaanuser_yangmengajukansurat` varchar(100) NOT NULL,
   `alamatlengkapuser_yangmengajukansurat` varchar(256) NOT NULL,
-  `keterangandan_penjelasanberpergian` mediumtext NOT NULL,
+  `keterangandan_penjelasanberpergian` varchar(250) NOT NULL,
   `waktukeluarnya_suratberpergian` varchar(100) NOT NULL,
   `pernyataanasal_kepaladesa` varchar(25) NOT NULL,
   `tandatangan_kepaladesasetempat` text NOT NULL,
@@ -2608,13 +2551,13 @@ CREATE TABLE `suratketerangancatatankepolisian_siska` (
   `jeniskelamin_useryangmengajukanskck` varchar(10) NOT NULL,
   `kebangsaan_useryangmengajukanskck` varchar(20) NOT NULL,
   `tempatdantanggallahir_useryangmengajukanskck` varchar(50) NOT NULL,
-  `tempattinggalsekaranglengkap_useryangmengajukanskck` longtext NOT NULL,
+  `tempattinggalsekaranglengkap_useryangmengajukanskck` varchar(130) NOT NULL,
   `pekerjaan_useryangmengajukanskck` varchar(100) NOT NULL,
   `nomorktp_useryangmengajukanskck` int(16) NOT NULL,
   `nomorpasporataukitasataupunkitap_useryangmengajukanskck` varchar(40) NOT NULL,
   `rumus_sidikjari` varchar(50) NOT NULL,
-  `pernyataandasar_suratdikeluarkan` longtext NOT NULL,
-  `keterangan_keperluan` longtext NOT NULL,
+  `pernyataandasar_suratdikeluarkan` varchar(250) NOT NULL,
+  `keterangan_keperluan` varchar(200) NOT NULL,
   `berlaku_daritanggal` varchar(25) NOT NULL,
   `sampai_dengantanggal` varchar(25) NOT NULL,
   `foto3x4_useryangmengajukansuratskck` blob NOT NULL,
@@ -2640,11 +2583,11 @@ CREATE TABLE `suratketerangantidakmampu_siska` (
   `agamauser_atauorangyangmengajukansurat` varchar(25) NOT NULL,
   `useratauorang_yangmengajukansurat` varchar(100) NOT NULL,
   `statusperkawinanuser_atauorangyangmengajukansurat` varchar(35) NOT NULL,
-  `alamatuser_atauorangyangmengajukansurat` longtext NOT NULL,
+  `alamatuser_atauorangyangmengajukansurat` varchar(150) NOT NULL,
   `namaayah_ataubapakuser` varchar(64) NOT NULL,
   `umurayah_ataubapakdalamsuratketeranganini` varchar(10) NOT NULL,
   `pekerjaanayah_ataubapakuser` varchar(100) NOT NULL,
-  `alamatlengkap_ayahataubapakuser` mediumtext NOT NULL,
+  `alamatlengkap_ayahataubapakuser` varchar(150) NOT NULL,
   `namaibuuser_dalamsurat` varchar(64) NOT NULL,
   `umuribuuser_dalamsuratketeranganini` varchar(10) NOT NULL,
   `alamatlengkap_ibuuserdalamsurat` mediumtext NOT NULL,
@@ -2677,7 +2620,7 @@ CREATE TABLE `suratpengantarktp_siska` (
   `agama_user` varchar(25) NOT NULL,
   `pekerjaanuser_yangmengajukansurat` varchar(150) NOT NULL,
   `statusperkawinan_user` varchar(25) NOT NULL,
-  `alamatlengkap_useryangmengajukansurat` mediumtext NOT NULL,
+  `alamatlengkap_useryangmengajukansurat` varchar(150) NOT NULL,
   `pernyataanatau_konfirmasisurat` varchar(200) NOT NULL,
   `waktu_keluaransurat` varchar(20) NOT NULL,
   `kepaladesa_daerah` varchar(45) NOT NULL,
@@ -2703,7 +2646,7 @@ CREATE TABLE `suratpindahantarkabupatenkotaatauprovinsi_siska` (
   `alamatsekarang_useryangmengajukansuratpindah` varchar(256) NOT NULL,
   `alamattujuanpindah_useryangmengajukansuratpindah` varchar(256) NOT NULL,
   `jumlahkeluarga_yangpindah` varchar(100) NOT NULL,
-  `keterangan_permohonandanpenggunaansurat` longtext NOT NULL,
+  `keterangan_permohonandanpenggunaansurat` varchar(150) NOT NULL,
   `suratpindah_keluaran` varchar(50) NOT NULL,
   `camat_daerah` varchar(75) NOT NULL,
   `tandatangan_camatdaerah` text NOT NULL,
@@ -2958,7 +2901,8 @@ ALTER TABLE `aktakelahiran_siska`
 -- Indeks untuk tabel `daftarprovinsi_siska`
 --
 ALTER TABLE `daftarprovinsi_siska`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `created_by` (`created_by`);
 
 --
 -- Indeks untuk tabel `dataagamastatistikkependudukakhusus_siska`
@@ -3520,7 +3464,8 @@ ALTER TABLE `kartukeluarga_siska`
 -- Indeks untuk tabel `kartutandapenduduk_siska`
 --
 ALTER TABLE `kartutandapenduduk_siska`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `created_by` (`created_by`);
 
 --
 -- Indeks untuk tabel `kontakpenting_siska`
