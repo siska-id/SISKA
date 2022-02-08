@@ -93,12 +93,14 @@ function login_user()
         if ($count < 1) {
             $response = array(
                 'status' => 0,
-                'message' => 'Alamat Email tidak terdaftar!'
+                'message' => 'Alamat Email tidak terdaftar!',
+                'errs' => "email"
             );
         } elseif (!$checkPass = password_verify($password, $fetchData->kata_sandi)) {
             $response = array(
                 'status' => 0,
-                'message' => 'Kata Sandi salah!'
+                'message' => 'Kata Sandi salah!',
+                'errs' => "password"
             );
         } else {
             $_SESSION['login'] = $fetchData->alamat_email;
