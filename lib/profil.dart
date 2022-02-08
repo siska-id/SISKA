@@ -114,7 +114,12 @@ class ProfilPage extends StatelessWidget {
                     leading: Icon(Icons.settings_outlined),
                     title: Text("Setting"),
                   ),
-                )
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      print("clik");
+                    },
+                    child: Text("Tautkan"))
               ],
             )),
           )),

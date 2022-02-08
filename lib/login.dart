@@ -7,9 +7,9 @@ class LoginPage extends StatelessWidget {
   String apiUrl = Api.url;
   String errorMsg = "";
 
-  getApi(String email, String password) async{
-    final res = await http.post(apiUrl, body: {"email" : email, "password" : password});
-    final data = jsonDecode(res.body);
+  getApi(String email, String password) async {
+    //final res = await http.post(apiUrl, body: {"email" : email, "password" : password});
+    //final data = jsonDecode(res.body);
   }
 
   @override
@@ -41,10 +41,10 @@ class LoginPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 60, right: 50, left: 50),
                   child: TextFormField(
-                    controller: inptEmail,
+                    //controller: inputEmail,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(25))),
+                          borderRadius: BorderRadius.all(Radius.circular(25))),
                       hintText: 'adminsiska@gmail.com',
                       labelText: 'Username/email',
                       prefixIcon: Icon(Icons.person),
