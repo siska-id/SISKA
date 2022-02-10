@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class ProfilPage extends StatelessWidget {
+class ProfilPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -95,6 +95,30 @@ class ProfilPage extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 25),
                   child: Align(
                     alignment: Alignment.centerLeft,
+                    child: Text("Desa",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18)),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: ListTile(
+                    leading: Icon(Icons.home_max_outlined),
+                    title: Text("Desa"),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
                     child: Text("Setting",
                         style: TextStyle(
                             color: Colors.white,
@@ -115,11 +139,6 @@ class ProfilPage extends StatelessWidget {
                     title: Text("Setting"),
                   ),
                 ),
-                ElevatedButton(
-                    onPressed: () {
-                      print("clik");
-                    },
-                    child: Text("Tautkan"))
               ],
             )),
           )),
