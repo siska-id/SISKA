@@ -1,23 +1,56 @@
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:siskaproject/profil1.dart';
+import 'profil1.dart';
 import 'package:siskaproject/tautkan.dart';
 import 'layanan.dart';
 import 'tautkan.dart';
 import 'login.dart';
 import 'home.dart';
 import 'buatakun.dart';
+import 'surat.dart';
+import 'konfirmasi.dart';
+import 'IsiLayanan.dart';
 import 'profil2.dart';
 
-void main() => runApp(ProfilPage2());
+void main() => runApp(MyBottomBarDemo());
 
-class NavBar extends StatelessWidget {
+class MyBottomBarDemo extends StatefulWidget {
+  @override
+  _MyBottomBarDemoState createState() => new _MyBottomBarDemoState();
+}
+
+class _MyBottomBarDemoState extends State<MyBottomBarDemo> {
+  int _pageIndex = 0;
+  late PageController _pageController;
+
+  List<Widget> tabPages = [
+    HomePage(
+      email: '',
+    ),
+    LayananPage(),
+    TautkanPage(),
+    ProfilPage2(),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: _pageIndex);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _pageIndex,
+          onTap: onTabTapped,
           unselectedItemColor: Colors.grey,
           selectedItemColor: Color.fromRGBO(51, 157, 255, 1),
           elevation: 20,
@@ -51,7 +84,23 @@ class NavBar extends StatelessWidget {
             ),
           ],
         ),
+        body: PageView(
+          children: tabPages,
+          onPageChanged: onPageChanged,
+          controller: _pageController,
+        ),
       ),
     );
+  }
+
+  void onPageChanged(int page) {
+    setState(() {
+      this._pageIndex = page;
+    });
+  }
+
+  void onTabTapped(int index) {
+    this._pageController.animateToPage(index,
+        duration: const Duration(milliseconds: 50), curve: Curves.easeInOut);
   }
 }

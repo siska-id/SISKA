@@ -67,6 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                 // SizedBox(
                 //   height: 5.0,
                 // ),
+                Center(
+                  child: Text(errorMsg, style: TextStyle(color: Colors.red)),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 40, right: 30, left: 30),
                   child: TextFormField(
@@ -74,17 +77,13 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
-                      hintText: 'Alamat Email',
+                      hintText: 'email@example.com',
                       labelText: 'Alamat Email',
                       prefixIcon: Icon(Icons.person),
                     ),
                     keyboardType: TextInputType.emailAddress,
                     showCursor: true,
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10, right: 20),
-                  child: Text(errorMsg, style: TextStyle(color: Colors.red)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 30, right: 30, left: 30),
@@ -94,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(25))),
-                      hintText: 'Kata Sandi',
+                      hintText: '*********',
                       labelText: 'Kata Sandi',
                       prefixIcon: Icon(Icons.person),
                     ),
